@@ -1,0 +1,31 @@
+--- 
+:index2: 
+  :tables: 
+    :searching_elements: 
+      :boost: 5
+      :fields: 
+        :nome: 0
+        :cognome: 2
+        :eta: 5
+    :table2: 
+      :boost: 3
+      :fields: 
+        :nome2: 0
+        :cognome2: 2
+        :eta2: 5
+  :directory: ./db_index
+:index1: 
+  :tables: 
+    :searching_elements: 
+      :boost: 5
+      :fields: 
+        :nome: 0
+        :cognome: 2
+        :eta: 5
+    :table2: 
+      :boost: 3
+      :fields: 
+        :nome2: 0
+        :cognome2: 2
+        :eta2: 5
+  :directory: ./db_index
