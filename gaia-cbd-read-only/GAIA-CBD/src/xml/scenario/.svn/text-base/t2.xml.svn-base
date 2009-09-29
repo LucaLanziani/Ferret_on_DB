@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schemaExchange SYSTEM "dtdForSchemaExchange.dtd">
+<schemaExchange name="t2 - copia relazioni perde fk">
+	<source>
+		<relation name="r1">
+			<key name="k1"/>
+			<attribute name="a1"/>
+			<fkey name="fk1">
+				<refRelName>r2</refRelName>
+			</fkey>
+		</relation>
+		<relation name="r2">
+			<key name="k2"/>
+			<attribute name="a2"/>
+		</relation>
+		<relation name="r3">
+			<key name="k3"/>
+			<attribute name="a3"/>
+			<fkey name="fk2">
+				<refRelName>r1</refRelName>
+			</fkey>
+		</relation>
+	</source>
+	<target>
+		<relation name="r1">
+			<key name="k1"/>
+			<attribute name="a1"/>
+		</relation>
+		<relation name="r2">
+			<key name="k2"/>
+			<attribute name="a2"/>
+		</relation>
+		<relation name="r3">
+			<key name="k3"/>
+			<attribute name="a3"/>
+		</relation>
+	</target>
+</schemaExchange>

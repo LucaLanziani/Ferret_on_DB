@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForMatching.dtd">
+<dataExchange name="recipe">
+	<source>
+		<relation name="UNIVERSITA">
+			<key name="coduni"/>
+			<attribute name="nameuni"/>
+		</relation>
+		<relation name="AULA">
+			<key name="codaula"/>
+			<attribute name="nameaula"/>
+			<fkey name="id_univaula">
+				<refRelName>UNIVERSITA</refRelName>
+			</fkey>
+		</relation>
+		<relation name="COURSE">
+			<key name="codcourse"/>
+			<attribute name="namecourse"/>
+			<attribute name="yearcourse"/>
+			<fkey name="id_univcourse">
+				<refRelName>UNIVERSITA</refRelName>
+			</fkey>
+			<fkey name="aulacourse">
+				<refRelName>UNIVERSITA</refRelName>
+			</fkey>
+		</relation>
+	</source>
+	<target/>
+</dataExchange>

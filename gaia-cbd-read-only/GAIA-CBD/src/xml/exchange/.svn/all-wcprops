@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange
+END
+course.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/course.xml
+END
+dtdForSchemaExchange.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/dtdForSchemaExchange.dtd
+END
+schemaexchange.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/schemaexchange.xml
+END
+schemaexchange1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/schemaexchange1.xml
+END
+schemaexchangesimplewithconstants.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/schemaexchangesimplewithconstants.xml
+END
+recipe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/recipe.xml
+END
+SEcourse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/SEcourse.xml
+END
+dtdForDataExchange.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/dtdForDataExchange.dtd
+END
+schemaexchangesimple.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/exchange/schemaexchangesimple.xml
+END

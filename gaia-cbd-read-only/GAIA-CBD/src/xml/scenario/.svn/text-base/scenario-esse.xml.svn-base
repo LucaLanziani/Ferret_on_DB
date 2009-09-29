@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForMatching.dtd">
+<dataExchange name="course">
+	<source>
+		<relation name="RESEARCHERS">
+			<key name="surname"/>
+			<attribute name="title"/>
+			<fkey name="group">
+				<refRelName>GROUPS</refRelName>
+			</fkey>
+		</relation>
+		<relation name="GROUPS">
+			<key name="id"/>
+			<attribute name="name"/>
+		</relation>
+		<relation name="STAFF">
+			<key name="sid"/>
+			<attribute name="home"/>
+			<attribute name="office"/>
+			<attribute name="salary"/>
+			<attribute name="picture"/>
+			<fkey name="surname">
+				<refRelName>RESEARCHERS</refRelName>
+			</fkey>
+		</relation>
+	</source>
+	<target/>
+</dataExchange>

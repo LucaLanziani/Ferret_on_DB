@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="relationType" class="it.uniroma3.gaia.hibernate.model.AtomType">
+			<property name="id" value="1"/>
+			<property name="description" value="Relation"/>
+	</bean>
+	<bean id="attributeType" class="it.uniroma3.gaia.hibernate.model.AtomType">
+			<property name="id" value="2"/>
+			<property name="description" value="Attribute"/>
+	</bean>
+	<bean id="keyType" class="it.uniroma3.gaia.hibernate.model.AtomType">
+			<property name="id" value="3"/>
+			<property name="description" value="AttributeKey"/>
+	</bean>
+	<bean id="fkeyType" class="it.uniroma3.gaia.hibernate.model.AtomType">
+			<property name="id" value="4"/>
+			<property name="description" value="AttibuteFKey"/>
+	</bean>
+	
+	<bean id="exchangeType_1-1" class="it.uniroma3.gaia.hibernate.model.SchemaExchangeType">
+		<property name="id" value="1"/>
+		<property name="dxRelNum" value="1"/>
+		<property name="snRelNum" value="1"/>
+	</bean>
+	<bean id="exchangeType_1-2" class="it.uniroma3.gaia.hibernate.model.SchemaExchangeType">
+		<property name="id" value="2"/>
+		<property name="snRelNum" value="1"/>
+		<property name="dxRelNum" value="2"/>
+	</bean>
+	<bean id="exchangeType_2-1" class="it.uniroma3.gaia.hibernate.model.SchemaExchangeType">
+		<property name="id" value="3"/>
+		<property name="snRelNum" value="2"/>
+		<property name="dxRelNum" value="1"/>
+	</bean>
+	<bean id="exchangeType_2-2" class="it.uniroma3.gaia.hibernate.model.SchemaExchangeType">
+		<property name="id" value="4"/>
+		<property name="snRelNum" value="2"/>
+		<property name="dxRelNum" value="2"/>
+	</bean>
+	<bean id="exchangeType_3-1" class="it.uniroma3.gaia.hibernate.model.SchemaExchangeType">
+		<property name="id" value="5"/>
+		<property name="snRelNum" value="3"/>
+		<property name="dxRelNum" value="1"/>
+	</bean>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForDataExchange.dtd">
+<dataExchange name="course">
+	<source>
+		<relation name="UNIVERSITA">
+			<key name="coduni"/>
+			<attribute name="nameuni"/>
+		</relation>
+	</source>
+	<target>
+		<relation name="UNIVERSITA">
+			<key name="coduni"/>
+			<attribute name="nameuni"/>
+		</relation>
+	</target>
+</dataExchange>

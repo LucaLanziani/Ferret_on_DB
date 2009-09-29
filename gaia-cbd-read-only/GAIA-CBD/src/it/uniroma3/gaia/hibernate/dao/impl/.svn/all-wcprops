@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/dao/impl
+END
+AtomTypeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/dao/impl/AtomTypeDaoImpl.java
+END
+SchemaExchangeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/dao/impl/SchemaExchangeDaoImpl.java
+END
+SchemaExchangeTypeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/dao/impl/SchemaExchangeTypeDaoImpl.java
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase
+END
+dtdForChase.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/dtdForChase.dtd
+END
+chase-simple-fk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/chase-simple-fk.xml
+END
+chase-simple-fk1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/chase-simple-fk1.xml
+END
+chase-1-n-fk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/chase-1-n-fk.xml
+END
+chase-n-1-fk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/chase-n-1-fk.xml
+END
+chase-simple-fk2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/chase-simple-fk2.xml
+END
+chase-simple.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/chase-simple.xml
+END
+chase-n-1-fk1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/chase-n-1-fk1.xml
+END
+chase-simple1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/chase/chase-simple1.xml
+END

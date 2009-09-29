@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model
+END
+Atom.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/Atom.java
+END
+AtomType.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/AtomType.java
+END
+GaiaBo.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/GaiaBo.java
+END
+SchemaExchange.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/SchemaExchange.java
+END
+Atom.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/Atom.hbm.xml
+END
+SchemaExchangeType.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/SchemaExchangeType.java
+END
+AtomType.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/AtomType.hbm.xml
+END
+AtomTypeEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/AtomTypeEnum.java
+END
+SchemaExchange.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/SchemaExchange.hbm.xml
+END
+SchemaExchangeType.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/model/SchemaExchangeType.hbm.xml
+END

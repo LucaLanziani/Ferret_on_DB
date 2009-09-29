@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/89/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate
+END
+HibernateHelperException.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/HibernateHelperException.java
+END
+HibernateHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/HibernateHelper.java
+END
+hibernate.cfg.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/89/trunk/GAIA-CBD/src/it/uniroma3/gaia/hibernate/hibernate.cfg.xml
+END

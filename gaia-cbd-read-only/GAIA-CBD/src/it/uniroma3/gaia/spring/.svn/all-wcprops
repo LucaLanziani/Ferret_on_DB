@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/spring
+END
+gaia-spring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/spring/gaia-spring.xml
+END
+gaia-dao.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/spring/gaia-dao.xml
+END
+gaia-service.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/spring/gaia-service.xml
+END

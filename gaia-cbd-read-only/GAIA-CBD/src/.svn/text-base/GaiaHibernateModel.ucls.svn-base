@@ -1,0 +1,142 @@
+<class-diagram icons="false" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.model.Atom" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="169" y="220" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.model.AtomType" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/model/AtomType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="110" y="10" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.model.GaiaBo" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/model/GaiaBo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="368" y="-18" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.model.SchemaExchange" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/model/SchemaExchange.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="485" y="167" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.model.SchemaExchangeType" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/model/SchemaExchangeType.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="627" y="11" width="-1" height="-1"/>  
+  </class>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.model.AtomType" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/AtomType.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.model.GaiaBo" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/GaiaBo.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false">      
+      <attribute name="equality"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false">      
+      <attribute name="atomType"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.hibernate.model.AtomType" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/AtomType.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.model.SchemaExchangeType" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/SchemaExchangeType.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.model.GaiaBo" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/GaiaBo.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false">      
+      <attribute name="schemaExchange"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.hibernate.model.SchemaExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/SchemaExchange.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false">      
+      <attribute name="father"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.model.GaiaBo" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/GaiaBo.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false">      
+      <attribute name="fkRefer"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.hibernate.model.SchemaExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/SchemaExchange.java" binary="false">      
+      <attribute name="atoms"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.hibernate.model.Atom" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/Atom.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.model.SchemaExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/SchemaExchange.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.model.GaiaBo" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/GaiaBo.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.hibernate.model.SchemaExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/SchemaExchange.java" binary="false">      
+      <attribute name="schemaExchangeType"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.hibernate.model.SchemaExchangeType" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/model/SchemaExchangeType.java" binary="false"/>  
+  </association>
+</class-diagram>

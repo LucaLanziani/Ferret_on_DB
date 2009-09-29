@@ -1,0 +1,10 @@
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true
+it.uniroma3.gaia.gwt.client.ResultDTO, true
+java.lang.Exception, false
+java.lang.RuntimeException, false
+java.lang.String, true
+java.lang.Throwable, false
+java.util.HashMap, true
+java.util.IdentityHashMap, true
+java.util.LinkedHashMap, true
+java.util.TreeMap, true

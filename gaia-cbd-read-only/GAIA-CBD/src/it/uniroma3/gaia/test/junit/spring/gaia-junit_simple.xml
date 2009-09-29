@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 1(2(4),3(4),5) -->
+	
+	<import resource="gaia-junit.xml"/>
+	
+	<bean id="simpleSchemaExchange1" class="it.uniroma3.gaia.hibernate.model.SchemaExchange">
+		<property name="description" value="simpleSchemaExchange1"/>
+		<property name="schemaExchangeType" ref="exchangeType_1-1"/>
+		<property name="atoms">
+			<list value-type="java.util.ArrayLis">
+				<ref bean="r1"/>
+				<ref bean="k1"/>
+				<ref bean="a1"/>
+				
+				<ref bean="r2"/>
+				<ref bean="k2"/>
+				<ref bean="a2"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="simpleSchemaExchange1S" class="it.uniroma3.gaia.service.dto.SchemaExchangeSortable">
+		<constructor-arg ref="simpleSchemaExchange1"/>
+		<property name="isRoot" value="true"/>
+		<property name="sons">
+			<list value-type="java.util.ArrayList">
+				<ref bean="simpleSchemaExchange2S"/>
+				<ref bean="simpleSchemaExchange3S"/>
+				<ref bean="simpleSchemaExchange5S"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="simpleSchemaExchange2" class="it.uniroma3.gaia.hibernate.model.SchemaExchange">
+		<property name="description" value="simpleSchemaExchange2"/>
+		<property name="schemaExchangeType" ref="exchangeType_1-1"/>
+		<property name="atoms">
+			<list value-type="java.util.ArrayLis">
+				<ref bean="r3"/>
+				<ref bean="k3"/>
+				<ref bean="a3"/>
+				
+				<ref bean="r4"/>
+				<ref bean="k4"/>
+				<ref bean="a4"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="simpleSchemaExchange2S" class="it.uniroma3.gaia.service.dto.SchemaExchangeSortable">
+		<constructor-arg ref="simpleSchemaExchange2"/>
+		<property name="isRoot" value="false"/>
+		<property name="sons">
+			<list value-type="java.util.ArrayList">
+				<ref bean="simpleSchemaExchange4S"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="simpleSchemaExchange3" class="it.uniroma3.gaia.hibernate.model.SchemaExchange">
+		<property name="description" value="simpleSchemaExchange3"/>
+		<property name="schemaExchangeType" ref="exchangeType_1-1"/>
+		<property name="atoms">
+			<list value-type="java.util.ArrayLis">
+				<ref bean="r5"/>
+				<ref bean="k5"/>
+				<ref bean="a5"/>
+				
+				<ref bean="r6"/>
+				<ref bean="k6"/>
+				<ref bean="a6"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="simpleSchemaExchange3S" class="it.uniroma3.gaia.service.dto.SchemaExchangeSortable">
+		<constructor-arg ref="simpleSchemaExchange3"/>
+		<property name="isRoot" value="false"/>
+		<property name="sons">
+			<list value-type="java.util.ArrayList">
+				<ref bean="simpleSchemaExchange4S"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="simpleSchemaExchange4" class="it.uniroma3.gaia.hibernate.model.SchemaExchange">
+		<property name="description" value="simpleSchemaExchange4"/>
+		<property name="schemaExchangeType" ref="exchangeType_1-1"/>
+		<property name="atoms">
+			<list value-type="java.util.ArrayLis">
+				<ref bean="r7"/>
+				<ref bean="k7"/>
+				<ref bean="a7"/>
+				<ref bean="a9"/>
+				
+				<ref bean="r8"/>
+				<ref bean="k8"/>
+				<ref bean="a8"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="simpleSchemaExchange4S" class="it.uniroma3.gaia.service.dto.SchemaExchangeSortable">
+		<constructor-arg ref="simpleSchemaExchange4"/>
+		<property name="isRoot" value="false"/>
+		<property name="sons">
+			<list value-type="java.util.ArrayList"/>
+		</property>
+	</bean>
+	
+	<bean id="simpleSchemaExchange5" class="it.uniroma3.gaia.hibernate.model.SchemaExchange">
+		<property name="description" value="simpleSchemaExchange5"/>
+		<property name="schemaExchangeType" ref="exchangeType_1-1"/>
+		<property name="atoms">
+			<list value-type="java.util.ArrayLis">
+				<ref bean="r9"/>
+				<ref bean="k9"/>
+				<ref bean="a10"/>
+				
+				<ref bean="r10"/>
+				<ref bean="k10"/>
+				<ref bean="a11"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="simpleSchemaExchange5S" class="it.uniroma3.gaia.service.dto.SchemaExchangeSortable">
+		<constructor-arg ref="simpleSchemaExchange5"/>
+		<property name="isRoot" value="false"/>
+		<property name="sons">
+			<list value-type="java.util.ArrayList"/>
+		</property>
+	</bean>
+	
+	<!-- Atomi del primo schema exchange -->
+	<bean id="r1" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="1"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="sn"/>
+	</bean>
+	<bean id="k1" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="2"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r1"/>
+	</bean>
+	<bean id="a1" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="3"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r1"/>
+	</bean>
+	
+	<bean id="r2" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="4"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="dx"/>
+		<property name="equality" ref="r1"/>
+	</bean>
+	<bean id="k2" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="5"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r2"/>
+		<property name="equality" ref="k1"/>
+	</bean>
+	<bean id="a2" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="6"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r2"/>
+		<property name="equality" ref="a1"/>
+	</bean>
+	
+	<!-- Atomi del secondo schema exchange -->
+	<bean id="r3" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="7"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange2"/>
+		<property name="side" value="sn"/>
+	</bean>
+	<bean id="k3" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="8"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange2"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r3"/>
+	</bean>
+	<bean id="a3" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="9"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange2"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r3"/>
+		<property name="constant" value="pippo"/>
+	</bean>
+	
+	<bean id="r4" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="10"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange2"/>
+		<property name="side" value="dx"/>
+		<property name="equality" ref="r3"/>
+	</bean>
+	<bean id="k4" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="11"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange2"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r4"/>
+		<property name="equality" ref="k3"/>
+	</bean>
+	<bean id="a4" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="12"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange2"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r4"/>
+		<property name="equality" ref="a3"/>
+	</bean>
+	
+	<!-- Atomi del terzo schema exchange -->
+	<bean id="r5" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="13"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange3"/>
+		<property name="side" value="sn"/>
+	</bean>
+	<bean id="k5" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="14"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange3"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r5"/>
+	</bean>
+	<bean id="a5" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="15"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange3"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r5"/>
+		<property name="constant" value="pluto"/>
+	</bean>
+	
+	<bean id="r6" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="16"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange3"/>
+		<property name="side" value="dx"/>
+		<property name="equality" ref="r5"/>
+	</bean>
+	<bean id="k6" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="17"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange3"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r6"/>
+		<property name="equality" ref="k5"/>
+	</bean>
+	<bean id="a6" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="18"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange3"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r6"/>
+		<property name="equality" ref="a5"/>
+	</bean>
+	
+	<!-- Atomi del quarto schema exchange -->
+	<bean id="r7" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="19"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange4"/>
+		<property name="side" value="sn"/>
+	</bean>
+	<bean id="k7" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="20"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange4"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r7"/>
+	</bean>
+	<bean id="a7" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="21"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange4"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r7"/>
+		<property name="constant" value="pluto"/>
+	</bean>
+	<bean id="a9" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="22"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange4"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r7"/>
+		<property name="constant" value="pippo"/>
+	</bean>
+	
+	<bean id="r8" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="23"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange4"/>
+		<property name="side" value="dx"/>
+		<property name="equality" ref="r7"/>
+	</bean>
+	<bean id="k8" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="24"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange4"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r8"/>
+		<property name="equality" ref="k7"/>
+	</bean>
+	<bean id="a8" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="25"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange4"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r8"/>
+		<property name="equality" ref="a7"/>
+	</bean>
+	
+	<!-- Atomi del quinto schema exchange -->
+	<bean id="r9" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="26"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange5"/>
+		<property name="side" value="sn"/>
+	</bean>
+	<bean id="k9" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="27"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange5"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r9"/>
+		<property name="constant" value="pluto"/>
+	</bean>
+	<bean id="a10" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="28"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange5"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r9"/>
+	</bean>
+	
+	<bean id="r10" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="29"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange5"/>
+		<property name="side" value="dx"/>
+		<property name="equality" ref="r9"/>
+	</bean>
+	<bean id="k10" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="30"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange5"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r10"/>
+		<property name="equality" ref="k9"/>
+	</bean>
+	<bean id="a11" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="31"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange5"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r10"/>
+		<property name="equality" ref="a10"/>
+	</bean>
+</beans>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/dto
+END
+ConversionData.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/dto/ConversionData.java
+END
+SchemaExchangeSortable.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/dto/SchemaExchangeSortable.java
+END
+MatchingData.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/dto/MatchingData.java
+END
+EqualityArcType.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/dto/EqualityArcType.java
+END
+ChaseData.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/dto/ChaseData.java
+END

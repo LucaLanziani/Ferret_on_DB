@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForMatching.dtd">
+<dataExchange name="recipe">
+	<source>
+		<relation name="UNIVERSITA">
+			<key name="coduni"/>
+			<attribute name="nameuni"/>
+		</relation>
+	</source>
+	<target/>
+</dataExchange>

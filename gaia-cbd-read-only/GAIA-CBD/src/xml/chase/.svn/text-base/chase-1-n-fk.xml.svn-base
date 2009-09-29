@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForChase.dtd">
+<dataExchange name="univ">
+	<source>
+		<relation name="STUD">
+			<key name="sid"/>
+			<attribute name="bname"/>
+			<attribute name="studname"/>
+			<attribute name="studsurname"/>
+			<attribute name="floor"/>
+			<attribute name="dname"/>
+			<attribute name="studbirthday"/>
+			<attribute name="manname"/>
+		</relation>
+	</source>
+	<target>
+		<relation name="R1">
+			<key name="k2"/>
+			<attribute name="dname"/>
+			<attribute name="floor"/>
+			<attribute name="bname"/>
+			<attribute name="manname"/>
+			<attribute name="studname"/>
+			<attribute name="studsurname"/>
+			<attribute name="studbirthday"/>
+			<fkey name="fk4">
+				<refRelName>R6</refRelName>
+			</fkey>
+			<fkey name="fk5">
+				<refRelName>R9</refRelName>
+			</fkey>
+		</relation>
+		<relation name="R6">
+			<key name="k7"/>
+			<attribute name="dname"/>
+			<attribute name="floor"/>
+			<attribute name="bname"/>
+			<attribute name="manname"/>
+			<attribute name="studname"/>
+			<attribute name="studsurname"/>
+			<attribute name="studbirthday"/>
+		</relation>
+		<relation name="R9">
+			<key name="k10"/>
+			<attribute name="dname"/>
+			<attribute name="floor"/>
+			<attribute name="bname"/>
+			<attribute name="manname"/>
+			<attribute name="studname"/>
+			<attribute name="studsurname"/>
+			<attribute name="studbirthday"/>
+		</relation>
+		<relation name="STUD">
+			<key name="sid"/>
+			<attribute name="dname"/>
+			<attribute name="floor"/>
+			<attribute name="bname"/>
+			<attribute name="manname"/>
+			<attribute name="studname"/>
+			<attribute name="studsurname"/>
+			<attribute name="studbirthday"/>
+			<fkey name="fk15">
+				<refRelName>R1</refRelName>
+			</fkey>
+		</relation>
+	</target>
+</dataExchange>

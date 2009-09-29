@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 1(2(4),3(4),5) -->
+	
+	<import resource="../gaia-junit.xml"/>
+	
+	<bean id="simpleSchemaExchange1" class="it.uniroma3.gaia.hibernate.model.SchemaExchange">
+		<property name="description" value="simpleSchemaExchange1"/>
+		<property name="schemaExchangeType" ref="exchangeType_1-1"/>
+		<property name="atoms">
+			<list>
+				<ref bean="r1"/>
+				<ref bean="k1"/>
+				<ref bean="a1"/>
+				<ref bean="a2"/>
+				<ref bean="a3"/>
+				
+				<ref bean="r2"/>
+				<ref bean="k2"/>
+				<ref bean="a4"/>
+				<ref bean="a5"/>
+				<ref bean="a6"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- Atomi del primo schema exchange -->
+	<bean id="r1" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="1"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="sn"/>
+		<property name="realName" value="DEPT"/>
+		<property name="attributeRealNames">
+			<list>
+				<value>dname</value>
+				<value>floor</value>
+				<value>manager</value>
+				<value>building</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="k1" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="2"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r1"/>
+		<property name="realName" value="did"/>
+	</bean>
+	<bean id="a1" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="3"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r1"/>
+	</bean>
+	<bean id="a2" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="7"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r1"/>
+	</bean>
+	<bean id="a3" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="8"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="sn"/>
+		<property name="father" ref="r1"/>
+	</bean>
+	
+	<bean id="r2" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="4"/>
+		<property name="atomType" ref="relationType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="dx"/>
+		<property name="equality" ref="r1"/>
+	</bean>
+	<bean id="k2" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="5"/>
+		<property name="atomType" ref="keyType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r2"/>
+		<property name="equality" ref="k1"/>
+	</bean>
+	<bean id="a4" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="6"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r2"/>
+		<property name="equality" ref="a1"/>
+	</bean>
+	<bean id="a5" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="9"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r2"/>
+		<property name="equality" ref="a2"/>
+	</bean>
+	<bean id="a6" class="it.uniroma3.gaia.hibernate.model.Atom">
+		<property name="id" value="10"/>
+		<property name="atomType" ref="attributeType"/>
+		<property name="schemaExchange" ref="simpleSchemaExchange1"/>
+		<property name="side" value="dx"/>
+		<property name="father" ref="r2"/>
+		<property name="equality" ref="a3"/>
+	</bean>
+</beans>

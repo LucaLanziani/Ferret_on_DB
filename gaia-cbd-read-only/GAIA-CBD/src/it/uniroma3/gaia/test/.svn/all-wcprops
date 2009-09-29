@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/54/trunk/GAIA-CBD/src/it/uniroma3/gaia/test
+END
+Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/test/Test.java
+END
+TestDisposizioni.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/test/TestDisposizioni.java
+END
+TestSEParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/test/TestSEParser.java
+END
+TestSimpleInsertion.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/test/TestSimpleInsertion.java
+END
+TestSimpleMatch.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/test/TestSimpleMatch.java
+END
+TestPapottiInserimento.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/test/TestPapottiInserimento.java
+END
+TestPapottiMatch.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/test/TestPapottiMatch.java
+END
+TestSimpleInsertionWithConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/test/TestSimpleInsertionWithConstants.java
+END

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schemaExchange SYSTEM "dtdForSchemaExchange.dtd">
+<schemaExchange name="C6-company CMS esterno title e file in tabella con join nome chiave">
+	<source>
+		<relation name="r1">
+			<key name="k1"/>
+			<attribute name="a1" constant="title"/>
+			<attribute name="a2"/>
+		</relation>
+
+		<relation name="r2">
+			<key name="k1"/>
+			<attribute name="a3" constant="file"/>
+			<attribute name="a4"/>
+		</relation>
+		
+	</source>
+	<target>
+		<relation name="r1">
+			<key name="k1"/>
+			<attribute name="a1"/>
+			<attribute name="a2"/>
+			<attribute name="a3"/>
+			<attribute name="a4"/>
+		</relation>
+	</target>
+</schemaExchange>
+

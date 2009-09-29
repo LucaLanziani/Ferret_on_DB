@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario
+END
+scenario-esse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/scenario-esse.xml
+END
+dtdForSchemaExchange.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/dtdForSchemaExchange.dtd
+END
+t1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/t1.xml
+END
+t2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/t2.xml
+END
+repository-initial.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/repository-initial.xml
+END
+repository-t6.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/repository-t6.xml
+END
+t3.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/t3.xml
+END
+scenario-esseprimo.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/scenario-esseprimo.xml
+END
+dtdForMatching.dtd
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/dtdForMatching.dtd
+END
+t6.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/t6.xml
+END
+schemaExchange-commons.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/xml/scenario/schemaExchange-commons.xml
+END

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForChase.dtd">
+<dataExchange name="recipe">
+	<source>
+		<relation name="DEPT">
+			<key name="did"/>
+			<attribute name="dname"/>
+			<attribute name="floor"/>
+			<fkey name="building">
+				<refRelName>BUILD</refRelName>
+			</fkey>
+		</relation>
+		<relation name="BUILD">
+			<key name="bid"/>
+			<attribute name="bname"/>
+		</relation>
+	</source>
+	<target>
+		<relation name="DEPT">
+			<key name="did"/>
+			<attribute name="dname"/>
+			<attribute name="floor"/>
+			<attribute name="bname"/>
+		</relation>
+	</target>
+</dataExchange>

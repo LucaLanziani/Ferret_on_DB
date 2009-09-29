@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="it.uniroma3.gaia.hibernate.model">
+  <class name="Atom">
+  	<id name="id" type="integer" unsaved-value="null">
+		<column name="ID_ATOM" not-null="true" precision="11" scale="0"/>
+		<generator class="increment"/>
+	</id>
+	<!-- <property name="position" column="POSITION" type="integer"/> -->
+	<property name="side" column="SIDE" type="string"/>
+	<property name="constant" column="CONSTANT" type="string"/>
+	<property name="inequalityConstant" column="INEQUALITY_CONSTANT" type="string"/>
+	<many-to-one name="father" entity-name="it.uniroma3.gaia.hibernate.model.Atom" cascade="none" fetch="join" lazy="false">
+		<column name="FATHER" precision="11" scale="0"/>
+	</many-to-one>
+	<many-to-one name="equality" entity-name="it.uniroma3.gaia.hibernate.model.Atom" cascade="none" fetch="join" lazy="false">
+		<column name="EQUALITY" precision="11" scale="0"/>
+	</many-to-one>
+	<many-to-one name="atomType" entity-name="it.uniroma3.gaia.hibernate.model.AtomType" cascade="none" fetch="join" lazy="false">
+		<column name="TYPE" precision="11" scale="0"/>
+	</many-to-one>
+	<many-to-one name="schemaExchange" entity-name="it.uniroma3.gaia.hibernate.model.SchemaExchange" cascade="none" fetch="join" lazy="proxy">
+		<column name="EXCHANGE_ID" precision="11" scale="0"/>
+	</many-to-one>
+	<many-to-one name="fkRefer" entity-name="it.uniroma3.gaia.hibernate.model.Atom" cascade="none" fetch="join" lazy="proxy">
+		<column name="FK_REFER" precision="11" scale="0"/>
+	</many-to-one>
+  </class>
+</hibernate-mapping>

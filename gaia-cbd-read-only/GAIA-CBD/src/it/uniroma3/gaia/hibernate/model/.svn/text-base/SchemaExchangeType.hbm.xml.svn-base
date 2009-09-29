@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="it.uniroma3.gaia.hibernate.model">
+  <class name="SchemaExchangeType" table="SchemaExchangeType" schema="gaia" optimistic-lock="none">
+  	<id name="id" type="integer" unsaved-value="null">
+		<column name="ID_SE_TYPE" not-null="true" precision="11" scale="0"/>
+		<generator class="increment"/>
+	</id>
+	<property name="snRelNum" column="SN_REL_NUM" type="integer"/>
+	<property name="dxRelNum" column="DX_REL_NUM" type="integer"/>
+  </class>
+</hibernate-mapping>

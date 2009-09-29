@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="ImageViewer" default="all" basedir="${gwt.project.home}">
+	<description>
+		This is build file for GWT module 'it.uniroma3.gaia.gwt.gaiaWeb' deployment.
+		GWT Designer generates it each time when you initiate deployment.
+		
+		You can use this file later for manual deployment, but keep in mind, that
+		classpath is hardcoded in it, so after changes in classpath you should
+		regenerate build file.
+	</description>
+	<property name="gwt.war.out" value="/home/ciccio/Scrivania" />
+	<property name="gwt.project.home" value="/home/ciccio/workspace-3.4/gaia-CBD" />
+	<property name="gwt.eclipse.home" value="/home/ciccio/eclipse-3.4" />
+	<property name="gwt.home" value="${gwt.eclipse.home}/plugins/com.google.gwt.eclipse.sdkbundle.linux_1.6.4.v200904062334/gwt-linux-1.6.4" />
+	<property name="gwt.module.id" value="it.uniroma3.gaia.gwt.gaiaWeb" />
+	<property name="war.name" value="gaiaWeb.war" />
+
+	<target name="gwt-compile" description="Compile to JavaScript">
+		<java classname="com.google.gwt.dev.Compiler" fork="yes" failonerror="true" maxmemory="256m">
+			<arg line="-war ${gwt.project.home}/WebContent" />
+			<classpath>
+				<pathelement location="${gwt.project.home}/src" />
+				<pathelement location="${gwt.project.home}/WebContent/WEB-INF/classes" />
+				<pathelement location="${gwt.eclipse.home}/plugins/com.google.gwt.eclipse.sdkbundle.linux_1.6.4.v200904062334/gwt-linux-1.6.4/gwt-user.jar" />
+				<pathelement location="${gwt.eclipse.home}/plugins/com.google.gwt.eclipse.sdkbundle.linux_1.6.4.v200904062334/gwt-linux-1.6.4/gwt-dev-linux.jar" />
+				<pathelement location="${gwt.project.home}/WebContent/WEB-INF/lib" />
+				<pathelement location="${gwt.eclipse.home}/plugins/com.google.gwt.eclipse.sdkbundle.linux_1.6.4.v200904062334/gwt-linux-1.6.4/gwt-dev-linux.jar" />
+			</classpath>
+			<arg value="-style"/>
+			<arg value="OBFUSCATED"/>
+			<arg value="${gwt.module.id}" />
+		</java>
+	</target>
+
+	<target name="war" depends="gwt-compile">
+		<delete file="${war.name}" />
+		<jar destfile="${war.name}" basedir="WebContent" duplicate="preserve" />
+	</target>
+	
+	<target name="deploy" depends="war">
+		<move file="${war.name}" todir="${gwt.war.out}" />
+	</target>
+
+	<target name="all" depends="deploy" />
+
+</project>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="it.uniroma3.gaia.hibernate.model">
+  <class name="SchemaExchange" table="SchemaExchange" schema="gaia" optimistic-lock="none">
+  	<id name="id" type="integer" unsaved-value="null">
+		<column name="ID_SE" not-null="true" precision="11" scale="0"/>
+		<generator class="increment"/>
+	</id>
+	<property name="description" column="DESCRIPTION" type="string"/>
+	<many-to-one name="schemaExchangeType" entity-name="it.uniroma3.gaia.hibernate.model.SchemaExchangeType" cascade="none" fetch="join" lazy="false">
+		<column name="TYPE" precision="11" scale="0"/>
+	</many-to-one>
+	<bag name="Atoms" inverse="true" cascade="save-update"  > 
+      <key> 
+        <column name="EXCHANGE_ID" not-null="true" precision="11" scale="0"/>
+      </key>
+      <one-to-many entity-name="it.uniroma3.gaia.hibernate.model.Atom" />
+    </bag>
+  </class>
+</hibernate-mapping>

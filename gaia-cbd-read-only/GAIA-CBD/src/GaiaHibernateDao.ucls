@@ -1,0 +1,139 @@
+<class-diagram icons="false" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.HibernateHelper" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/HibernateHelper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="122" y="396" width="-1" height="-1"/>  
+  </class>  
+  <interface language="java" name="it.uniroma3.gaia.hibernate.dao.AtomTypeDao" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/AtomTypeDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="141" y="268" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.dao.DaoFactory" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/DaoFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="316" y="357" width="-1" height="-1"/>  
+  </class>  
+  <enumeration language="java" name="it.uniroma3.gaia.hibernate.dao.DaoMapping" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/DaoMapping.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="501" y="379" width="-1" height="-1"/>  
+  </enumeration>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.dao.GaiaDao" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/GaiaDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="396" y="56" width="-1" height="-1"/>  
+  </class>  
+  <interface language="java" name="it.uniroma3.gaia.hibernate.dao.SchemaExchangeDao" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/SchemaExchangeDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="386" y="273" width="-1" height="-1"/>  
+  </interface>  
+  <interface language="java" name="it.uniroma3.gaia.hibernate.dao.SchemaExchangeTypeDao" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/SchemaExchangeTypeDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="662" y="273" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.dao.impl.AtomTypeDaoImpl" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/AtomTypeDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="142" y="178" width="-1" height="-1"/>  
+  </class>  
+  <enumeration language="java" name="it.uniroma3.gaia.hibernate.dao.impl.AtomTypeDaoImpl.AtomTypeEnum" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/AtomTypeDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="122" y="72" width="-1" height="-1"/>  
+  </enumeration>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.dao.impl.SchemaExchangeDaoImpl" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/SchemaExchangeDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="388" y="183" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.hibernate.dao.impl.SchemaExchangeTypeDaoImpl" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/SchemaExchangeTypeDaoImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="662" y="183" width="-1" height="-1"/>  
+  </class>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.dao.impl.SchemaExchangeDaoImpl" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/SchemaExchangeDaoImpl.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.dao.GaiaDao" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/GaiaDao.java" binary="false"/>  
+  </generalization>  
+  <realization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.dao.impl.AtomTypeDaoImpl" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/AtomTypeDaoImpl.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.dao.AtomTypeDao" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/AtomTypeDao.java" binary="false"/>  
+  </realization>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.dao.impl.SchemaExchangeTypeDaoImpl" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/SchemaExchangeTypeDaoImpl.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.dao.GaiaDao" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/GaiaDao.java" binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.dao.impl.AtomTypeDaoImpl" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/AtomTypeDaoImpl.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.dao.GaiaDao" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/GaiaDao.java" binary="false"/>  
+  </generalization>  
+  <nesting>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.dao.impl.AtomTypeDaoImpl" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/AtomTypeDaoImpl.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.dao.impl.AtomTypeDaoImpl.AtomTypeEnum" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/AtomTypeDaoImpl.java" binary="false"/>  
+  </nesting>  
+  <realization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.dao.impl.SchemaExchangeDaoImpl" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/SchemaExchangeDaoImpl.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.dao.SchemaExchangeDao" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/SchemaExchangeDao.java" binary="false"/>  
+  </realization>  
+  <realization>    
+    <source project="Gaia" name="it.uniroma3.gaia.hibernate.dao.impl.SchemaExchangeTypeDaoImpl" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/impl/SchemaExchangeTypeDaoImpl.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.hibernate.dao.SchemaExchangeTypeDao" 
+      file="/Gaia/src/it/uniroma3/gaia/hibernate/dao/SchemaExchangeTypeDao.java" binary="false"/>  
+  </realization>
+</class-diagram>

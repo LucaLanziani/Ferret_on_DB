@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForMatching.dtd">
+<dataExchange name="course">
+	<source>
+		<relation name="SCIENTISTS">
+			<key name="lastname"/>
+			<attribute name="title"/>
+			<fkey name="dept">
+				<refRelName>DEPARTMENT</refRelName>
+			</fkey>
+		</relation>
+		<relation name="DEPARTMENT">
+			<key name="did"/>
+			<attribute name="name"/>
+		</relation>
+		<relation name="REGULARS">
+			<key name="lastname"/>
+			<attribute name="office"/>
+			<attribute name="role"/>
+		</relation>
+	</source>
+	<target/>
+</dataExchange>

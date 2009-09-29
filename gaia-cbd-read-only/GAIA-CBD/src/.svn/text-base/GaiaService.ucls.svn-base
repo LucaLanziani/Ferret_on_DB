@@ -1,0 +1,50 @@
+<class-diagram icons="false" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="it.uniroma3.gaia.service.dto.ConversionData" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/service/dto/ConversionData.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="109" y="192" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.service.dto.MatchingData" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/service/dto/MatchingData.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="286" y="183" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.service.SchemaExchangeConverterServiceImpl" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/service/SchemaExchangeConverterServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="160" y="-2" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.service.SchemaExchangeRetrieverServiceImpl" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/service/SchemaExchangeRetrieverServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="476" y="-13" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.service.SchemaExchangeSaverServiceImpl" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/service/SchemaExchangeSaverServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="424" y="62" width="-1" height="-1"/>  
+  </class>
+</class-diagram>

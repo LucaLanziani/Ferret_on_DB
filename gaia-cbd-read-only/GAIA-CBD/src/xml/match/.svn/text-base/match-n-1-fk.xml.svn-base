@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForMatching.dtd">
+<dataExchange name="univ">
+	<source>
+		<relation name="DEPT">
+			<key name="did"/>
+			<attribute name="dname"/>
+			<attribute name="floor"/>
+			<fkey name="building">
+				<refRelName>BUILD</refRelName>
+			</fkey>
+			<fkey name="manager">
+				<refRelName>MANAGER</refRelName>
+			</fkey>
+		</relation>
+		<relation name="BUILD">
+			<key name="bid"/>
+			<attribute name="bname"/>
+		</relation>
+		<relation name="MANAGER">
+			<key name="mid"/>
+			<attribute name="manname"/>
+		</relation>
+		<relation name="STUD">
+			<key name="sid"/>
+			<attribute name="studname"/>
+			<attribute name="studsurname"/>
+			<attribute name="studbirthday"/>
+			<fkey name="department">
+				<refRelName>DEPT</refRelName>
+			</fkey>
+		</relation>
+	</source>
+	<target>
+		<relation name="?1">
+			<key name="?2"/>
+			<attribute name="?3"/>
+		</relation>
+	</target>
+</dataExchange>

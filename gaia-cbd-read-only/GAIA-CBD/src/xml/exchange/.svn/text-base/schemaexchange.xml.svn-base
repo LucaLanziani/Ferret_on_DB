@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForDataExchange.dtd">
+<dataExchange name="course">
+	<source>
+		<relation name="UNIVERSITA">
+			<key name="coduni"/>
+			<attribute name="nameuni"/>
+		</relation>
+		<relation name="AULA">
+			<key name="codaula"/>
+			<attribute name="nameaula"/>
+			<fkey name="id_univaula">
+				<refRelName>UNIVERSITA</refRelName>
+			</fkey>
+		</relation>
+		<relation name="COURSE">
+			<key name="codcourse"/>
+			<attribute name="namecourse"/>
+			<attribute name="yearcourse"/>
+			<fkey name="id_univcourse">
+				<refRelName>UNIVERSITA</refRelName>
+			</fkey>
+			<fkey name="aulacourse">
+				<refRelName>AULA</refRelName>
+			</fkey>
+		</relation>
+	</source>
+	<target>
+		<relation name="UNIVERSITA">
+			<key name="coduni"/>
+			<attribute name="nameuni"/>
+		</relation>
+		<relation name="COURSE">
+			<key name="codcourse"/>
+			<attribute name="namecourse"/>
+			
+		</relation>
+	</target>
+</dataExchange>

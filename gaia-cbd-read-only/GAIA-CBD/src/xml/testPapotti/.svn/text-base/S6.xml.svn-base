@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForMatching.dtd">
+
+<!-- Staff(name,title,bonus,data,office) Data(did,address,file) Office(oid,officePhone)  -->
+<dataExchange name="S6 - Company">
+	<source>
+		<relation name="Staff">
+			<key name="name"/>
+			<attribute name="title"/>
+			<attribute name="bonus"/>
+			<fkey name="data">
+				<refRelName>Data</refRelName>
+			</fkey>
+			<fkey name="office">
+				<refRelName>Office</refRelName>
+			</fkey>
+		</relation>
+		<relation name="Data">
+			<key name="did"/>
+			<attribute name="address"/>
+			<attribute name="file"/>
+		</relation>
+		<relation name="Office">
+			<key name="oid"/>
+			<attribute name="officePhone"/>
+		</relation>
+	</source>
+	<target/>
+</dataExchange>

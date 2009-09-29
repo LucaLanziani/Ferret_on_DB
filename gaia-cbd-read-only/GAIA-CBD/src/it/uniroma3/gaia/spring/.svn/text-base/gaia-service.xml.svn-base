@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="schemaExchangeConverterService" class="it.uniroma3.gaia.service.impl.SchemaExchangeConverterServiceImpl" autowire="byName"/>
+	<bean id="schemaExchangeRetrieverService" class="it.uniroma3.gaia.service.impl.SchemaExchangeRetrieverServiceImpl" autowire="byName"/>
+	<bean id="schemaExchangeSaverService" class="it.uniroma3.gaia.service.impl.SchemaExchangeSaverServiceImpl" autowire="byName"/>
+	<bean id="schemaExchangeSorterService" class="it.uniroma3.gaia.service.impl.SchemaExchangeSorterServiceImpl" autowire="byName"/>
+	<bean id="schemaExchangeParserService" class="it.uniroma3.gaia.service.impl.SchemaExchangeParserServiceImpl" autowire="byName"/>
+	
+	<bean id="gaiaFrontendService" class="it.uniroma3.gaia.service.impl.GaiaFrontendServiceImpl" autowire="byName"/>
+
+</beans>

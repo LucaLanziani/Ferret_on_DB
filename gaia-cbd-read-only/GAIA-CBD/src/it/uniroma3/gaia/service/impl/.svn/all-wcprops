@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/55/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/impl
+END
+SchemaExchangeParserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/impl/SchemaExchangeParserServiceImpl.java
+END
+GaiaFrontendServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/55/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/impl/GaiaFrontendServiceImpl.java
+END
+SchemaExchangeSorterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/impl/SchemaExchangeSorterServiceImpl.java
+END
+SchemaExchangeSaverServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/impl/SchemaExchangeSaverServiceImpl.java
+END
+SchemaExchangeConverterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/impl/SchemaExchangeConverterServiceImpl.java
+END
+SchemaExchangeRetrieverServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/11/trunk/GAIA-CBD/src/it/uniroma3/gaia/service/impl/SchemaExchangeRetrieverServiceImpl.java
+END

@@ -1,0 +1,284 @@
+<class-diagram icons="false" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" version="0.9.65">  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>  
+  <class language="java" name="it.uniroma3.gaia.sama.CommonSchemaExchange" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/sama/CommonSchemaExchange.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="148" y="23" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.sama.DataExchange" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/sama/DataExchange.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="563" y="21" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.sama.Exchange" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/sama/Exchange.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="171" y="222" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.sama.SchemaExchange" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/sama/SchemaExchange.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="572" y="125" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.model.Attribute" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/Attribute.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="216" y="665" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.model.AttributeFkey" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/AttributeFkey.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="108" y="454" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.model.AttributeKey" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/AttributeKey.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="311" y="471" width="-1" height="-1"/>  
+  </class>  
+  <interface language="java" name="it.uniroma3.gaia.model.Condition" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/Condition.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="459" y="720" width="-1" height="-1"/>  
+  </interface>  
+  <class language="java" name="it.uniroma3.gaia.model.DerivatedAttribute" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/DerivatedAttribute.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="469" y="570" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.model.Function" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/Function.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="660" y="635" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.model.InequalityCondition" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/InequalityCondition.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="580" y="847" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.model.Relation" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="589" y="304" width="-1" height="-1"/>  
+  </class>  
+  <class language="java" name="it.uniroma3.gaia.model.SamenessCondition" project="Gaia" 
+    file="/Gaia/src/it/uniroma3/gaia/model/SamenessCondition.java" binary="false" corner="BOTTOM_RIGHT">    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>    
+    <position x="319" y="840" width="-1" height="-1"/>  
+  </class>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.Function" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Function.java" binary="false">      
+      <attribute name="attribute"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.Attribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Attribute.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.model.AttributeKey" 
+      file="/Gaia/src/it/uniroma3/gaia/model/AttributeKey.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.model.Attribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Attribute.java" binary="false"/>  
+  </generalization>  
+  <realization>    
+    <source project="Gaia" name="it.uniroma3.gaia.model.InequalityCondition" 
+      file="/Gaia/src/it/uniroma3/gaia/model/InequalityCondition.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.model.Condition" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Condition.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.Relation" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false">      
+      <attribute name="functions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.Function" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Function.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.model.AttributeFkey" 
+      file="/Gaia/src/it/uniroma3/gaia/model/AttributeFkey.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.model.Attribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Attribute.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.AttributeFkey" 
+      file="/Gaia/src/it/uniroma3/gaia/model/AttributeFkey.java" binary="false">      
+      <attribute name="relation"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.Relation" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.sama.SchemaExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/sama/SchemaExchange.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.sama.Exchange" file="/Gaia/src/it/uniroma3/gaia/sama/Exchange.java" 
+      binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.sama.CommonSchemaExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/sama/CommonSchemaExchange.java" binary="false">      
+      <attribute name="dataExchange2"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.sama.DataExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/sama/DataExchange.java" binary="false"/>  
+  </association>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.sama.DataExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/sama/DataExchange.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.sama.Exchange" file="/Gaia/src/it/uniroma3/gaia/sama/Exchange.java" 
+      binary="false"/>  
+  </generalization>  
+  <generalization>    
+    <source project="Gaia" name="it.uniroma3.gaia.model.DerivatedAttribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/DerivatedAttribute.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.model.Attribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Attribute.java" binary="false"/>  
+  </generalization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.sama.CommonSchemaExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/sama/CommonSchemaExchange.java" binary="false">      
+      <attribute name="dataExchange1"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.sama.DataExchange" 
+      file="/Gaia/src/it/uniroma3/gaia/sama/DataExchange.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.Relation" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false">      
+      <attribute name="keys"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.AttributeKey" 
+      file="/Gaia/src/it/uniroma3/gaia/model/AttributeKey.java" binary="false"/>  
+  </association>  
+  <realization>    
+    <source project="Gaia" name="it.uniroma3.gaia.model.SamenessCondition" 
+      file="/Gaia/src/it/uniroma3/gaia/model/SamenessCondition.java" binary="false"/>    
+    <target project="Gaia" name="it.uniroma3.gaia.model.Condition" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Condition.java" binary="false"/>  
+  </realization>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.DerivatedAttribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/DerivatedAttribute.java" binary="false">      
+      <attribute name="function"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.Function" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Function.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.Relation" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false">      
+      <attribute name="attributes"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.Attribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Attribute.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.Attribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Attribute.java" binary="false">      
+      <attribute name="conditions"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.Condition" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Condition.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.sama.Exchange" 
+      file="/Gaia/src/it/uniroma3/gaia/sama/Exchange.java" binary="false">      
+      <attribute name="source"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.Relation" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.Relation" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false">      
+      <attribute name="derivatedAtt"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.DerivatedAttribute" 
+      file="/Gaia/src/it/uniroma3/gaia/model/DerivatedAttribute.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.sama.Exchange" 
+      file="/Gaia/src/it/uniroma3/gaia/sama/Exchange.java" binary="false">      
+      <attribute name="target"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.Relation" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false"/>  
+  </association>  
+  <association>    
+    <display labels="true" multiplicity="true"/>    
+    <source navigable="false" project="Gaia" name="it.uniroma3.gaia.model.Relation" 
+      file="/Gaia/src/it/uniroma3/gaia/model/Relation.java" binary="false">      
+      <attribute name="fkeys"/>      
+      <multiplicity minimum="0" maximum="2147483647"/>    
+    </source>    
+    <target navigable="true" project="Gaia" name="it.uniroma3.gaia.model.AttributeFkey" 
+      file="/Gaia/src/it/uniroma3/gaia/model/AttributeFkey.java" binary="false"/>  
+  </association>
+</class-diagram>
