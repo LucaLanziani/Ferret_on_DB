@@ -25,16 +25,22 @@ include Ferret::Search
     - <#Att-#Key-#Ekey><Costante> <#Att-#Key-#Ekey><Costante>
 =end
 	def populate_index(index,tuples)
-  element=[["aabbcc","abc","aaabbbccc"],
+  element=[["aaaabbbbcccc","aabbcc","aaabbbccc"],
+           ["aaaabbbbcccc","aabbcc","aaabbbccc","aaabbbccc"],
+           ["aaaabbbbcccc","aaabbbccc","aabbcc"],
+           ["aaaabbbbcccc","aaabbbccc","aabbc"],
+           ["aaabbbccc","aaabbbccc","aaabbbccc"],
            ["abc","aabbcc","abbcc"],
            ["aabbcc","abc","abbcc"],
+           ["aaaabbbbcccc","aabbcc","aaabbbcccc"],
            ["abbcc","abc","aabbcc"],
            ["aabcc","aaabbc","aaaabc"],
            ["abccc","abccccc","aabbcccc"],
+           ["aaaaabbbbbbbcccccc","aaaaaaaaabbbbbbbbbccccccc","aaaaaaaaabbbbbbccc"],
            ["aaaaabbbbbbbcccccc","aaaaaaaaabbbbbbbbbccccccc","aaaaaaaaabbbbbbbcccc"]
           ]
   element.each { |e| document = Ferret::Document.new()
-                  document[:field]=Ferret::Field.new e.join(" ")
+                  document[:field]=Ferret::Field.new e.sort.sort_by{|k| k.length}.join(" ")
                   #document[:number]=Ferret::Field.new rand(50) 
                   index << document
                 }
@@ -77,15 +83,13 @@ if __FILE__==$0
   query_parser=Ferret::QueryParser.new()
   #query=query_parser.parse("field: (11*2*3*111*2*3*01*2*3)")
   #query=PhraseQuery.new(:field)
-  query=MultiTermQuery.new(:field)
-  query.add_term("aabbcc")
-  query.add_term("abc")
-  query.add_term("aaabbbccc")
+  #query=WildcardQuery.new(:field,"aaa*bbb*ccc*aaa*bbb*ccc*aaa*bbb*ccc*")
+  query=query_parser.parse("(field: aaaabbbbcccc AND field: aabbcc AND field:aaabbbccc) OR (field: aaaabbbbcccc* AND field: aabbcc* AND field:aaabbbccc*)")
   index= IndexReader.new("./unary_index/")
   searcher = Searcher.new(index)
-  field_sort = SortField.new(:field,:type => :integer)
+  field_sort = SortField.new(:field,:type => :integer, :reverse => true)
   sort = Sort.new([field_sort])
-  searcher.search_each(query,:limit => 100,:sort=>"SCORE" ) { |doc_id,score| 
+  searcher.search_each(query,:limit => 100,:sort=>sort ) { |doc_id,score| 
                                               mydoc=index.get_document(doc_id) 
                                               puts "field: #{mydoc[:field]} number: #{mydoc[:number]} score: #{score}"
                                          }

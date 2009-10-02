@@ -20,7 +20,6 @@
 			<key name="k3"/>
 			<attribute name="a3" constant="file" />
 		</relation>
-
 	</source>
 	<target>
 		<relation name="r1">
