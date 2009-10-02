@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT dataExchange (source, target)>
+<!ELEMENT source (relation+)>
+<!ELEMENT target (relation*)>
+<!ELEMENT relation (key+, attribute*, fkey*, function*)>
+<!ELEMENT key EMPTY>
+<!ELEMENT fkey (refRelName)>
+<!ELEMENT refRelName (#PCDATA)>
+<!ELEMENT attribute EMPTY>
+<!ELEMENT function (attributeName)>
+<!ELEMENT attributeName (#PCDATA)>
+<!ATTLIST dataExchange name CDATA #REQUIRED>
+<!ATTLIST relation name CDATA #REQUIRED>
+<!ATTLIST key name CDATA #REQUIRED>
+<!ATTLIST fkey name CDATA #REQUIRED>
+<!ATTLIST attribute name CDATA #REQUIRED>
+<!ATTLIST function name CDATA #REQUIRED>

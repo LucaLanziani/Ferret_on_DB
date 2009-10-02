@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schemaExchange SYSTEM "dtdForSchemaExchange.dtd">
+<schemaExchange name="G5-copia semplice, generazione relazione">
+	<source>
+		<relation name="r3">
+			<key name="k3"/>
+			<attribute name="a5"/>
+		</relation>
+
+	</source>
+	<target>
+		<relation name="r4">
+			<key name="k3"/>
+			<attribute name="a5"/>
+		</relation>
+	</target>
+</schemaExchange>

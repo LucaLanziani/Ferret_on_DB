@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForMatching.dtd">
+
+<!-- Staff(name,title,bonus,data) Data(did,address,file)  -->
+<dataExchange name="S3 - Company">
+	<source>
+		<relation name="Staff">
+			<key name="name"/>
+			<attribute name="title"/>
+			<attribute name="bonus"/>
+			<fkey name="data">
+				<refRelName>Data</refRelName>
+			</fkey>
+		</relation>
+		<relation name="Data">
+			<key name="did"/>
+			<attribute name="address"/>
+			<attribute name="file"/>
+		</relation>
+	</source>
+	<target/>
+</dataExchange>

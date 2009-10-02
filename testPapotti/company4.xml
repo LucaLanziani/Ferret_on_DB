@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schemaExchange SYSTEM "dtdForSchemaExchange.dtd">
+<schemaExchange name="C4-company CMS esterno title e bonus">
+	<source>
+		<relation name="r1">
+			<key name="k1"/>
+			<attribute name="a1" constant="title"/>
+			<attribute name="a2" constant="bonus"/>
+		</relation>
+		
+		
+	</source>
+	<target>
+		<relation name="r1">
+			<key name="k1"/>
+			<attribute name="a1"/>
+			<attribute name="a2"/>
+		</relation>
+	</target>
+</schemaExchange>

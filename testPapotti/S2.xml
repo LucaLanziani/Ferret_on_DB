@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataExchange SYSTEM "dtdForMatching.dtd">
+
+<!-- Subject(title,course,room,univ) University(name,address,rate) -->
+<dataExchange name="S2 - Univ">
+	<source>
+		<relation name="Subject">
+			<key name="title"/>
+			<attribute name="course"/>
+			<attribute name="room"/>
+			<fkey name="univ">
+				<refRelName>university</refRelName>
+			</fkey>
+		</relation>
+		<relation name="university"> 
+			<key name="name"/>
+			<attribute name="address"/>
+			<attribute name="rate"/>
+		</relation>
+	</source>
+	<target/>
+</dataExchange>
