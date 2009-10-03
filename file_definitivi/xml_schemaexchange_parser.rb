@@ -2,7 +2,11 @@ require "rexml/document"
 require "relation"
 require "pp"
 
-class  XMLSchemaexchangeParser < REXML::Document
+class  XmlSchemaexchangeParser < REXML::Document
+  def is_schemaexchange?
+    REXML::XPath.match(self,"/schemaExchange")!=[]
+  end
+  
   def get_target
     REXML::XPath.match(self,"/schemaExchange/target")
   end
@@ -45,6 +49,6 @@ end
 
 if __FILE__==$0
   file = File.new "../testPapotti/company1.xml"
-  doc = XMLSchemaexchangeParser.new file
+  doc = XmlSchemaexchangeParser.new file
   doc.each_relation{ |variable| puts variable.identify }
 end

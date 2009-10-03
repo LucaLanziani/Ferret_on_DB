@@ -5,6 +5,7 @@ class Relation
   * numero degli attributi
   * numero delle chiavi
   * numero delle chiavi esterne
+  * numero degli archi entranti
   * un hash che come chiave ha il nome della chiave esterna e come valore una lista dei nomi delle relazioni a cui quella chiave si riferisce
       es: {"fk1"=>["r1","r2"],"fk2"=>["r3","r4"]}
   * una hash delle costanti reggruppate secondo il tipo (attributo, chiave, chiave esterna)
