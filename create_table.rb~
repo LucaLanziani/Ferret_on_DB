@@ -6,7 +6,7 @@ ActiveRecord::Base.establish_connection(:adapter => 'mysql',
                                         :host => '192.168.1.100',
                                         :username => 'root',
                                         :password => 'zxcpoi',
-					:database => 'test');
+					               :database => 'test');
 
 module CreateTable
   

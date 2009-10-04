@@ -49,7 +49,7 @@ class Relation
   end
 =end
   def add_fkey(key,value)
-  	@fkey[key.to_sym] = value
+  	@fkey[key] = value
   end
 =begin
 	MI RACCOMANDO CONTROLLA!!

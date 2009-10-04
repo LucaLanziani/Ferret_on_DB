@@ -25,19 +25,19 @@ class  XmlSchemaexchangeParser < REXML::Document
         re_temp.ninarcs = REXML::XPath.match(self,"count(/schemaExchange/source//fkey[./refRelName='#{cur_rel.attributes['name']}']/refRelName)")[0]
        REXML::XPath.each(cur_rel,"./fkey") { |fkey|
             REXML::XPath.each(fkey,"./refRelName/text()") { |refname|
-              re_temp.add_fkey(fkey.attributes['name'],refname.to_s)
+              re_temp.add_fkey(fkey.attributes['name'],refname)
             }
         }
             
         REXML::XPath.each(cur_rel,"./key") { |key|
               REXML::XPath.each(key,"./@constant") { |constant|   
-                re_temp.add_constant(:k,constant.to_s)
+                re_temp.add_constant(:k,constant)
               }
         }
         
         REXML::XPath.each(cur_rel,"./attribute") { |attribute|
               REXML::XPath.each(attribute,"./@constant") { |constant|   
-                re_temp.add_constant(:a,constant.to_s)
+                re_temp.add_constant(:a,constant)
               }
         }
         

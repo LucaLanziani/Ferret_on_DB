@@ -70,7 +70,7 @@ gli elementi da aggiungere nel campo relativo ai riferimanti delle chiavi estern
 È questo il metodo deputato a ritornare le costanti associate alle relazioni,
 specificando anche a quale tipo di atomo è associata la costante
 =end
-  def each_constant_cod
+  def get_constant_cod
 	@source.each { |rel_name, rel|
 		rel_id = rel.identify
 		rel.constant.each { |con_type,list_of_con| 
