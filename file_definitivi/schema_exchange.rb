@@ -10,22 +10,38 @@ require "pp"
 =end
 class SchemaExchange
 
-  attr_accessor :source,:target,:xml_file_name
+  attr_accessor :target,:xml_file_name
   attr_reader :totfkey,:totkey,:totatt
-  def initialize(file_name,target=nil,source={})
+  def initialize(file_name,target=nil,source=[])
     @xml_file_name=file_name
     @source=source
+    @hashsource={}
     @target=target
     @totfkey=@totkey=@totatt=0
+    @ordered=false
+  end
+  
+  def hashsource
+  	source.each { |rel| @hashsource[rel.name.to_sym]=rel }
+  	@hashsource
+  end
+  
+  def source
+  	if @ordered
+  		then @source
+  		else @ordered=true
+  			@source.sort!
+  			
+  	end
   end
   
   def add_to_source(*relation)
-    relation.each { |rel| @source[rel.name.to_sym]=rel 
+    relation.each { |rel| @source << rel 
                     @totfkey+=rel.nfkey
                     @totkey+=rel.nkey
                     @totatt+=rel.natt
                   }
-    
+    @ordered=false
   end
   
   def add_target(*relation)
@@ -53,16 +69,13 @@ gli elementi da aggiungere nel campo relativo ai riferimanti delle chiavi estern
 		perm = Permutation.for(list_of_id)
 		perm_of_rel = perm.map { |p| p.project}
 		perm_of_rel.each {|p|
-			puts "PERMUTAZIONE!!!"
 			out_elem = "#{@source[rel_name].identify}"
 			p.each { |elem|
-				puts "elem: <#{elem}>"
+				#puts "elem: <#{elem}>"
 				out_elem += "_#{elem}"
 			}
-			puts "OUT!!!"
 			yield out_elem
 		}		
-
 	}
   end
 

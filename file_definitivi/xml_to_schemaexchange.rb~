@@ -1,6 +1,6 @@
 require "rexml/document"
 require "schema_exchange"
-require "xml_schemaexchange_parser"
+require "xml_exchange_parser"
 require "relation"
 
 class XmlToSchemaexchange
@@ -41,8 +41,8 @@ class XmlToSchemaexchange
   private
   
   def create_schemaexchange(file_name,file)
-    doc = XmlSchemaexchangeParser.new file
-    if doc.is_schemaexchange?
+    doc = XmlExchangeParser.new :schema,file
+    if doc.is_exchange?
     then  
       se=SchemaExchange.new(file_name,doc.get_target)
       doc.each_relation { |relation|  se.add_to_source(relation) }
@@ -53,14 +53,15 @@ class XmlToSchemaexchange
 end
 
 if __FILE__ == $0
-  xtoe = XmlToSchemaexchange.new()
-  xtoe.parse_files("../testPapotti/company1.xml","../testPapotti/company2.xml","../testPapotti/company3.xml")
-#  xtoe.parse_dir("../testPapotti")
-  xtoe.each_schemaexchange{ |schema| puts schema.toString  
-#	puts ""
-#	puts "- . - . - . - . - . - . - . - . - . - . -"
-#	schema.each_ref_cod{ |cod| pp cod}
-#	puts "_________________________________________"
-	schema.each_constant_cod.each { |element| puts element }
-}
+  	xtoe = XmlToSchemaexchange.new
+  	xtoe.parse_files("../testPapotti/company1.xml","../testPapotti/company2.xml","../testPapotti/company3.xml")
+	xtoe.schemaexchanges[0].hashsource.each_pair { |key,value|
+		puts "#{key} => #{value.identify}"
+	}
+=begin	
+  	xtoe.each_schemaexchange{ |schema| puts schema.toString  
+
+	schema.each_constant_cod { |element| puts element }
+	}
+=end
 end

@@ -1,4 +1,5 @@
 class Relation
+	include Comparable
 =begin
   una relazione viene modellata attraverso:
   * nome
@@ -22,6 +23,10 @@ class Relation
     @constant={:a=>[],:k=>[],:f=>[]}
   end
   
+  def <=>(other)
+  	self.identify <=> other.identify
+  end
+  
   def each_constants
     @constant.each_pair { |key, val| 
       val.each { |e| yield "#{identify}#{key.to_s.upcase}<#{e}>"}
@@ -34,7 +39,6 @@ class Relation
     identify.concat(cod_number(@nfkey))
     identify.concat(cod_number(@ninarcs))
     identify.concat("a"*(@natt+1))
-    puts @natt.class
     identify
   end
 
@@ -68,5 +72,5 @@ class Relation
   private
     def cod_number(number)
       ("0"*@@CMAX).concat(number.to_s)[-@@CMAX..-1].to_s
-    end
+  end
 end
