@@ -20,7 +20,8 @@ class SchemaExchange
     @totfkey=@totkey=@totatt=0
     @ordered=false
   end
-  
+
+
   def hashsource
   	source.each { |rel| @hashsource[rel.name.to_sym]=rel }
   	#MA QUI OGNI VOLTA CHE RICHIAMI HASHSOURCE SI RIGENERA L'HASH: CONTROLLARE
@@ -32,12 +33,12 @@ class SchemaExchange
   		then @source
   		else @ordered=true
   			@source.sort!
-  			
   	end
   end
   
   def add_to_source(*relation)
-    relation.each { |rel| @source << rel 
+    relation.each { |rel| @source << rel
+                    @hashsource[rel.name.to_sym]=rel
                     @totfkey+=rel.nfkey
                     @totkey+=rel.nkey
                     @totatt+=rel.natt
