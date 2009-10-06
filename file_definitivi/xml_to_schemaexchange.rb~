@@ -55,13 +55,14 @@ end
 if __FILE__ == $0
   	xtoe = XmlToSchemaexchange.new
   	xtoe.parse_files("../testPapotti/company1.xml","../testPapotti/company2.xml","../testPapotti/company3.xml")
-	xtoe.schemaexchanges[0].hashsource.each_pair { |key,value|
-		puts "#{key} => #{value.identify}"
-	}
-=begin	
-  	xtoe.each_schemaexchange{ |schema| puts schema.toString  
-
-	schema.each_constant_cod { |element| puts element }
+=begin
+	xtoe.schemaexchanges[0].source.each { |value|
+		puts "#{value.identify}"
 	}
 =end
+  	xtoe.each_schemaexchange{ |schema| puts schema.toString  
+
+	schema.each_ref_cod { |element| puts element }
+	}
+
 end

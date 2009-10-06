@@ -23,6 +23,7 @@ class SchemaExchange
   
   def hashsource
   	source.each { |rel| @hashsource[rel.name.to_sym]=rel }
+  	#MA QUI OGNI VOLTA CHE RICHIAMI HASHSOURCE SI RIGENERA L'HASH: CONTROLLARE
   	@hashsource
   end
   
@@ -61,48 +62,19 @@ class SchemaExchange
   end
 
 =begin
-È questo il metodo deputato a ritornare uno per uno (completi di permutazioni)
+È questo il metodo deputato a ritornare uno per uno e ordinati
 gli elementi da aggiungere nel campo relativo ai riferimanti delle chiavi esterne
 =end
   def each_ref_cod
-	get_hash_of_fkey_id.each { |rel_name, list_of_id| 
-		perm = Permutation.for(list_of_id)
-		perm_of_rel = perm.map { |p| p.project}
-		perm_of_rel.each {|p|
-			out_elem = "#{@source[rel_name].identify}"
-			p.each { |elem|
-				#puts "elem: <#{elem}>"
-				out_elem += "_#{elem}"
-			}
-			yield out_elem
-		}		
-	}
-  end
-
-=begin
-È questo il metodo deputato a ritornare le costanti associate alle relazioni,
-specificando anche a quale tipo di atomo è associata la costante
-=end
-  def each_constant_cod
-	@source.each { |rel_name, rel|
-		rel_id = rel.identify
-		rel.constant.each { |con_type,list_of_con| 
-			list_of_con.each { |con|
-				yield "#{rel_id}_#{con_type.to_s.upcase}_#{con}"
-			}
+	source.each { |rel|
+		ref_app = []
+		rel.fkey.each_pair { |fkey_name,fkey_ref_rel_name|
+			ref_app << hashsource[fkey_ref_rel_name.to_sym]
 		}
+		out_elem = "#{rel.identify}"
+		ref_app.sort!.each { |ref| out_elem += "_#{ref.identify}" }
+		yield out_elem if ref_app != []
 	}
   end
 
-  private
-	def get_hash_of_fkey_id
-		app = {}
-		@source.each { |rel_name, rel| 
-		rel.fkey.each { |fkey, ref| 
-			app[rel_name.to_sym] = [] if app[rel_name.to_sym] == nil
-			app[rel_name.to_sym] << @source[ref.to_sym].identify
-		}  	
-	}
-		app
-	end
 end

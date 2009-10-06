@@ -1,0 +1,63 @@
+chiavi esterne
+
+INDICE
+
+per ogni relazione
+    prendi tutte le chiavi esterne
+    array delle relazioni puntate 
+    lo ordini
+    scorri array e stampi identify
+    
+REL1_REL2_REL3        REL2_REL4_REL5
+    
+RICERCA
+
+per ogni relazione
+    prendi tutte le chiavi esterne
+    array delle relazioni puntate 
+    lo ordini
+    scorri array e stampi identify*
+
+REL1*_REL2*_REL3*    REL2*_REL4*_REL5*
+
+-_____________________________________________________________________-
+
+costanti
+
+INDICE
+REL1_A'constant' REL1_K'constant2'
+
+
+INDICE2
+REL1_A'constant1'_A'constant2'_K'constant3' REL2...
+
+
+RICERCA
+REL1*_A'constat'_...
+
+REL1_A'constant' REL2_K'constant2' REL1==REL2
+
+
+-_____________________________________________________________________-
+
+Document: schemaExchange
+
+field:
+
+
+1) :n_rel	=> numero relazioni
+2) :n_tot_key	=> numero delle chiavi
+3) :n_tot_fkey	=> numero delle chiavi esterne
+4) :n_in_arcs	=>  numero degli archi entranti
+5) :cod_rels 	=> #key#fkey#inarcs<codifica  unaria del nemuro degli attributi mediante il carattere 'a'>
+6) :cod_fkey 	=>  rel_<lista ordinata degli identificatori separata da '_' delle relazioni a cui fanno riferimento le chiavi esterne di rel>
+
+#DA MODELLARE LA RICERCA SULLE COSTANTI, LIVELLO DI DETTAGLIO TROPPO ALTO
+
+
+
+Document: relazioni
+
+Field:
+Schema exchange: id
+costanti: Aconstat1 Bconstant2

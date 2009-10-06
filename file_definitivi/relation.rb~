@@ -26,6 +26,7 @@ class Relation
   def <=>(other)
   	self.identify <=> other.identify
   end
+  
   def each_constants
     @constant.each_pair { |key, val| 
       val.each { |e| yield "#{identify}#{key.to_s.upcase}<#{e}>"}

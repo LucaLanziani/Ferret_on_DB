@@ -42,22 +42,11 @@ class Relation
     identify
   end
 
-=begin
-	riscrivo il metodo senza la lista di putnatori a relazioni, che abbiamo
-	visto essere inutile: è sempre e solo una!!
-=end
-=begin
-  def add_fkey(key,value)
-    @fkey[key.to_sym]=[] if @fkey[key.to_sym] == nil
-    @fkey[key.to_sym] << value
-  end
-=end
+
   def add_fkey(key,value)
   	@fkey[key.to_sym] = value
   end
-=begin
-	MI RACCOMANDO CONTROLLA!!
-=end
+
     
   def add_constant(key,value)
     @constant[key]=[] if @constant[key] == nil

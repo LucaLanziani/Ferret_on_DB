@@ -23,6 +23,7 @@ class SchemaExchange
   
   def hashsource
   	source.each { |rel| @hashsource[rel.name.to_sym]=rel }
+  	#MA QUI OGNI VOLTA CHE RICHIAMI HASHSOURCE SI RIGENERA L'HASH: CONTROLLARE
   	@hashsource
   end
   
@@ -65,6 +66,19 @@ class SchemaExchange
 gli elementi da aggiungere nel campo relativo ai riferimanti delle chiavi esterne
 =end
   def each_ref_cod
+	source.each { |rel|
+		ref_app = []
+		rel.fkey.each_pair { |fkey_name,fkey_ref_rel_name|
+			ref_app << hashsource[fkey_ref_rel_name.to_sym]
+		}
+		out_elem = "#{rel.identify}"
+		ref_app.sort!.each { |ref| out_elem += "_#{ref.identify}" }
+		yield out_elem if ref_app != []
+	}
+  end
+
+=begin 	DA CANCELLARE
+  def each_ref_cod
 	get_hash_of_fkey_id.each { |rel_name, list_of_id| 
 		perm = Permutation.for(list_of_id)
 		perm_of_rel = perm.map { |p| p.project}
@@ -78,11 +92,13 @@ gli elementi da aggiungere nel campo relativo ai riferimanti delle chiavi estern
 		}		
 	}
   end
+=end
+
 
 =begin
 È questo il metodo deputato a ritornare le costanti associate alle relazioni,
 specificando anche a quale tipo di atomo è associata la costante
-=end
+
   def each_constant_cod
 	@source.each { |rel_name, rel|
 		rel_id = rel.identify
@@ -93,7 +109,10 @@ specificando anche a quale tipo di atomo è associata la costante
 		}
 	}
   end
+=end
 
+
+=begin QUESTO METODO È ORMAI INUTILE
   private
 	def get_hash_of_fkey_id
 		app = {}
@@ -105,4 +124,5 @@ specificando anche a quale tipo di atomo è associata la costante
 	}
 		app
 	end
+=end
 end
