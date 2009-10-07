@@ -1,6 +1,6 @@
 require "rubygems"
 require "ferret"
-require "file_definitivi/index_populator"
+require "index_populator"
 include Ferret::Index
 include Ferret::Search
 

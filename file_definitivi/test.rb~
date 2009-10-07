@@ -1,6 +1,6 @@
 require "rubygems"
 require "ferret"
-require "file_definitivi/index_populator"
+require "index_populator"
 include Ferret::Index
 include Ferret::Search
 
@@ -84,19 +84,21 @@ if __FILE__==$0
   #query=WildcardQuery.new(:field,"aaa*bbb*ccc*aaa*bbb*ccc*aaa*bbb*ccc*")
   query=query_parser.parse("n_rel: 3 AND n_tot_key: 3 AND n_tot_fkey: 0 AND ((cod_rels: 010000a AND cod_rels: 010000a AND cod_rels 010000a) OR (cod_rels: 010000a* AND cod_rels: 010000a* AND cod_rels 010000a*)") 
   
-  ip = IndexPopulator.new("/home/fefe/Desktop/Ferret_on_DB/testPapotti","./unary_index/")
+  ip = IndexPopulator.new("/home/ivanagloriosi/Desktop/CODE/testPapotti","./unary_index/")
   index= IndexReader.new("./unary_index/")
   searcher = Searcher.new(index)
-  field_sort = SortField.new(:field,:type => :integer, :reverse => true)
+  field_sort = SortField.new(:cod_rels,:type => :integer, :reverse => true)
   sort = Sort.new([field_sort])
   searcher.search_each(query,:limit => 100,:sort=>sort ) { |doc_id,score| 
                                               mydoc=index.get_document(doc_id) 
-                                              puts    "n_rel: #{mydoc[:n_rel]} 
+                                              puts    "
+                                              		n_rel: #{mydoc[:n_rel]} 
                                               		n_tot_key: #{mydoc[:n_tot_key]} 
                                               		n_tot_fkey: #{mydoc[:n_tot_fkey]}
                                               		cod_rels: #{mydoc[:cod_rels]}
                                               		cod_fkey: #{mydoc[:cod_fkey]}
                                               		target: #{mydoc[:cod_fkey]}
+                                              		xml_file_name: #{mydoc[:xml_file_name]}
                                               		score: #{score}"
                                          }
 end
