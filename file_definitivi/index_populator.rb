@@ -21,12 +21,12 @@ class IndexPopulator
 	MODIFICARE PASSANDO LA DIRECTORY IN CUI SALVARE L'INDICE E SOPRATTUTTO FARCELO SALVARE DENTRO!!
 	PER IL MOMENTO FUNZIONA SOLO CON UNA DIR PIENA DI XML RAPPRESENTANTI SCHEMAEXCHANGE (DIREI CHE È PERFETTAMENTE ADERENTE ALLE SPECIFICHE)
 =end
-	def initialize(dir_absolute_path, index_name)
-			@dir_absolute_path = dir_absolute_path
+	def initialize(xml_schema_dir_absolute_path, index_dir)
+			@xml_schema_dir_absolute_path = xml_schema_dir_absolute_path
 			@xtose = XmlToSchemaexchange.new
 			@xtose.parse_dir(dir_absolute_path)
 			@index_name = index_name
-			@index = Index.new(:path => index_name, :create => true)
+			@index = Index.new(:path => index_dir, :create => true)
 			populate_index
 	end
 	
