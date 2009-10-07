@@ -18,7 +18,7 @@ class  XmlExchangeParser < REXML::Document
   end
   
   def get_target
-    REXML::XPath.match(self,"/schemaExchange/target") if @exchange!=:schema 
+    REXML::XPath.match(self,"/schemaExchange/target")
   end
   
   def source_relation_number

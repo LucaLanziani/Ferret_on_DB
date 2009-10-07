@@ -8,12 +8,11 @@ require "pp"
   * source: un arry di oggetti relation
   * target: codice xml che descrive il target
 =end
-class SchemaExchange
+class DataExchange
 
   attr_accessor :target,:xml_file_name
   attr_reader :totfkey,:totkey,:totatt
   def initialize(file_name,target=nil,source=[])
-    
     @xml_file_name=file_name
     @source=source
     @hashsource={}
@@ -60,7 +59,7 @@ class SchemaExchange
   end
   
   def toString
-    "SchemaExchange #{@xml_file_name}\nTotale Relazioni: #{source.size}\nTotale Chiavi: #{@totkey}\nTotale Chiavi Esterne: #{@totfkey}\nTotale Attributi: #{@totatt}\n\n"
+    "DataExchange #{@xml_file_name}\nTotale Relazioni: #{source.size}\nTotale Chiavi: #{@totkey}\nTotale Chiavi Esterne: #{@totfkey}\nTotale Attributi: #{@totatt}\n\n"
   end
 
 =begin
@@ -68,15 +67,14 @@ class SchemaExchange
 gli elementi da aggiungere nel campo relativo ai riferimanti delle chiavi esterne
 =end
   def each_ref_cod
-	source.each { |rel|
-		ref_app = []
-		rel.fkey.each_pair { |fkey_name,fkey_ref_rel_name|
-			ref_app << hashsource[fkey_ref_rel_name.to_sym]
-		}
-		out_elem = "#{rel.identify}"
-		ref_app.sort!.each { |ref| out_elem += "_#{ref.identify}" }
-		yield out_elem if ref_app != []
-	}
+	  source.each { |rel|
+		  ref_app = []
+		    rel.fkey.each_pair { |fkey_name,fkey_ref_rel_name|
+			    ref_app << hashsource[fkey_ref_rel_name.to_sym]
+		    }
+		  out_elem = "#{rel.identify}"
+		  ref_app.sort!.each { |ref| out_elem += "_#{ref.identify}" }
+		  yield out_elem if ref_app != []
+	  }
   end
-
 end

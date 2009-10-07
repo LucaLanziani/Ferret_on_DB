@@ -43,7 +43,7 @@ private
 			se.each_ref_cod { |cod| apprefcod += "#{cod} "}
 			document[:cod_rels]=Ferret::Field.new apprelscod[0, apprelscod.length-1]
 			#le codifiche delle chiavi esterne vanno separate da spazio?? per ora si
-			document[:cod_fkey  ]=Ferret::Field.new apprefcod[0, apprelscod.length-1]
+			document[:cod_fkey]=Ferret::Field.new apprefcod[0, apprelscod.length-1]
 			@index << document
 		}
 		@index.optimize()
