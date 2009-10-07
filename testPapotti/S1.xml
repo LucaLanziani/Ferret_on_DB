@@ -15,7 +15,6 @@
 		<relation name="university">
 			<key name="name"/>
 			<attribute name="address"/>
-			<attribute name="rating"/>
 		</relation>
 	</source>
 	<target/>

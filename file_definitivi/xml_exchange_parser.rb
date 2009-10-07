@@ -32,7 +32,7 @@ class  XmlExchangeParser < REXML::Document
         re_temp.nkey = REXML::XPath.match(cur_rel,"count(./key)")[0]
         re_temp.natt = REXML::XPath.match(cur_rel,"count(./attribute)")[0]
         re_temp.nfkey = REXML::XPath.match(cur_rel,"count(./fkey)")[0]
-        re_temp.ninarcs = REXML::XPath.match(self,"count(/schemaExchange/source//fkey[./refRelName='#{cur_rel.attributes['name']}']/refRelName)")[0]
+        re_temp.ninarcs = REXML::XPath.match(self,"count(/#{@exchange}Exchange/source//fkey[./refRelName='#{cur_rel.attributes['name']}']/refRelName)")[0]
        REXML::XPath.each(cur_rel,"./fkey") { |fkey|
             REXML::XPath.each(fkey,"./refRelName/text()") { |refname|
               re_temp.add_fkey(fkey.attributes['name'],refname.to_s)

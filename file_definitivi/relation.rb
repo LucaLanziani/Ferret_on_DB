@@ -24,7 +24,7 @@ class Relation
   end
   
   def <=>(other)
-  	self.identify <=> other.identify
+  	 self.identify <=> other.identify
   end
   
   def each_constants

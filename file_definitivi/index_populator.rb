@@ -36,19 +36,17 @@ private
 	def populate_index
 		@xtose.each_schemaexchange { |se| 
 			document = Ferret::Document.new()
-      		document[:n_rel]=Ferret::Field.new se.source.length
+          document[:n_rel]=Ferret::Field.new se.source.length
       		document[:n_tot_key]=Ferret::Field.new se.totkey
 			document[:n_tot_fkey]=Ferret::Field.new se.totfkey
-			apprelscod = ""
-			se.source.each { |rel| apprelscod += "#{rel.identify} "}
-			apprefcod = ""
-			se.each_ref_cod { |cod| apprefcod += "#{cod} "}
-			document[:cod_rels]=Ferret::Field.new apprelscod[0, apprelscod.length-1]
+			ref_cod=[]
+			se.each_ref_cod { |cod| ref_cod<<cod}
+			document[:cod_rels]=Ferret::Field.new se.source.map{ |x| x.identify}.join(" ")
+			document[:o_cod_rels]=Ferret::Field.new se.source.map{ |x| x.identify}.join("")
 			#le codifiche delle chiavi esterne vanno separate da spazio?? per ora si
-			document[:cod_fkey]=Ferret::Field.new apprefcod[0, apprelscod.length-1]
+			document[:cod_fkey]=Ferret::Field.new ref_cod.join(" ")
       document[:target]=Ferret::Field.new se.target
 			document[:xml_file_name]=Ferret::Field.new se.xml_file_name
-
 			@index << document
 		}
 		@index.optimize()
@@ -58,6 +56,6 @@ private
 end
 
 if __FILE__ == $0
-  	ip = IndexPopulator.new("/home/ivanagloriosi/Desktop/CODE/testPapotti", "primo_indice_completo")
-
+  	ip = IndexPopulator.new("../testPapotti", "primo_indice_completo")
+    
 end
