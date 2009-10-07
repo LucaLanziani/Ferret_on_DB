@@ -4,85 +4,13 @@ require "index_populator"
 include Ferret::Index
 include Ferret::Search
 
-=begin
-  table_class type ActiveRecord::Base
-  fieldboost type Hash ex: {:fieldname => boost, :fieldname => boost, ...}
-=end
- 
-
-  def create_indexes(tuples) 
-           index = Index.new(:path => "unary_index", :create => true)  
-           #tables è un hash con :nometabella => table_params
-           #populate_index(index,tuples)
-           return index
-  end
-  
-=begin
-  Un documento rappresenta la parte sinistra di uno Schema Exchange
-  I campi saranno 
-    - # delle Relazioni
-    - <#Att-#Key-#EKey> <#Att-#Key-#EKey> 
-    - <#Att-#Key-#EKey><#Att-#Key-#EKey>
-    - <#Att-#Key-#Ekey><Costante> <#Att-#Key-#Ekey><Costante>
-=end
-=begin	def populate_index(index,tuples)
-  element=[["aaaabbbbcccc","aabbcc","aaabbbccc"],
-           ["aaaabbbbcccc","aabbcc","aaabbbccc","aaabbbccc"],
-           ["aaaabbbbcccc","aaabbbccc","aabbcc"],
-           ["aaaabbbbcccc","aaabbbccc","aabbc"],
-           ["aaabbbccc","aaabbbccc","aaabbbccc"],
-           ["abc","aabbcc","abbcc"],
-           ["aabbcc","abc","abbcc"],
-           ["aaaabbbbcccc","aabbcc","aaabbbcccc"],
-           ["abbcc","abc","aabbcc"],
-           ["aabcc","aaabbc","aaaabc"],
-           ["abccc","abccccc","aabbcccc"],
-           ["aaaaabbbbbbbcccccc","aaaaaaaaabbbbbbbbbccccccc","aaaaaaaaabbbbbbccc"],
-           ["aaaaabbbbbbbcccccc","aaaaaaaaabbbbbbbbbccccccc","aaaaaaaaabbbbbbbcccc"]
-          ]
-  element.each { |e| document = Ferret::Document.new()
-                  document[:field]=Ferret::Field.new e.sort.sort_by{|k| k.length}.join(" ")
-                  #document[:number]=Ferret::Field.new rand(50) 
-                  index << document
-                }
-=begin    
-    tuples.times {  document = Ferret::Document.new()
-                    rel="#{"a"*(rand(5)+1)}#{"b"*(rand(3)+1)}#{"c"*(rand(2)+1)}"
-                    rel1="#{"a"*(rand(5)+1)}#{"b"*(rand(3)+1)}#{"c"*(rand(2)+1)}"
-                    rel2="#{"a"*(rand(5)+1)}#{"b"*(rand(3)+1)}#{"c"*(rand(2)+1)}"
-                    document[:field]=Ferret::Field.new "#{rel} #{rel1} #{rel2}"
-                    document[:number]=Ferret::Field.new rand(50) 
-                    index << document
-                 }
-      
-                 document = Ferret::Document.new()
-                 rel="abc"
-                 rel1="aabbcc"
-                 rel2="aaabbbccc"
-                 document[:field]=Ferret::Field.new "#{rel} #{rel1} #{rel2}"
-                 document[:number]=Ferret::Field.new rand(50) 
-                index << document       
-
-#   	index.optimize()
-#   	index.close()
-	end
-=end	
-	def load_config
-	  YAML.load(File.open("config.yaml"))
-	end
-	
-	def save_config(config)
-	  File.open("config.yaml","w") {|f| YAML.dump(index_format,f)}
-  end
-  
 
 
 if __FILE__==$0 
   query_parser=Ferret::QueryParser.new()
-  #query=query_parser.parse("field: (11*2*3*111*2*3*01*2*3)")
-  #query=PhraseQuery.new(:field)
-  #query=WildcardQuery.new(:field,"aaa*bbb*ccc*aaa*bbb*ccc*aaa*bbb*ccc*")
-  query=query_parser.parse("n_rel: 3 AND n_tot_key: 3 AND n_tot_fkey: 0 AND ((cod_rels: 010000a AND cod_rels: 010000a AND cod_rels 010000a) OR (cod_rels: 010000a* AND cod_rels: 010000a* AND cod_rels 010000a*)") 
+  
+#  query=query_parser.parse("n_rel: 3 AND n_tot_key: 3 AND n_tot_fkey: 0 AND ((cod_rels: 010000aa AND cod_rels: 010000aa AND cod_rels 010000aaa) OR (cod_rels: 010000aa* AND cod_rels: 010000aa* AND cod_rels 010000aaa*)") 
+  query=query_parser.parse("n_rel: 3 AND n_tot_key: 3 AND n_tot_fkey: 2 AND ((cod_rels: 010001aa AND cod_rels: 010001aa AND cod_rels 010200aa) OR (cod_rels: 010100aa* AND cod_rels: 010100aa* AND cod_rels 010200aa*)") 
   
   ip = IndexPopulator.new("/home/ivanagloriosi/Desktop/CODE/testPapotti","./unary_index/")
   index= IndexReader.new("./unary_index/")
@@ -92,13 +20,13 @@ if __FILE__==$0
   searcher.search_each(query,:limit => 100,:sort=>sort ) { |doc_id,score| 
                                               mydoc=index.get_document(doc_id) 
                                               puts    "
-                                              		n_rel: #{mydoc[:n_rel]} 
-                                              		n_tot_key: #{mydoc[:n_tot_key]} 
-                                              		n_tot_fkey: #{mydoc[:n_tot_fkey]}
-                                              		cod_rels: #{mydoc[:cod_rels]}
-                                              		cod_fkey: #{mydoc[:cod_fkey]}
-                                              		target: #{mydoc[:cod_fkey]}
-                                              		xml_file_name: #{mydoc[:xml_file_name]}
-                                              		score: #{score}"
+ 		n_rel: #{mydoc[:n_rel]} 
+ 		n_tot_key: #{mydoc[:n_tot_key]} 
+ 		n_tot_fkey: #{mydoc[:n_tot_fkey]}
+ 		cod_rels: #{mydoc[:cod_rels]}
+ 		cod_fkey: #{mydoc[:cod_fkey]}
+ 		target: #{mydoc[:cod_fkey]}
+ 		xml_file_name: #{mydoc[:xml_file_name]}
+ 		score: #{score}"
                                          }
 end
