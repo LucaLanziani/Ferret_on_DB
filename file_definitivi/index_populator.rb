@@ -34,8 +34,8 @@ private
 	def populate_index
 		@xtose.each_schemaexchange { |se| 
 			document = Ferret::Document.new()
-               document[:n_rel]=Ferret::Field.new se.source.length
-               document[:n_tot_key]=Ferret::Field.new se.totkey
+      document[:n_rel]=Ferret::Field.new se.source.length
+      document[:n_tot_key]=Ferret::Field.new se.totkey
 			document[:n_tot_fkey]=Ferret::Field.new se.totfkey
 			apprelscod = ""
 			se.source.each { |rel| apprelscod += "#{rel.identify} "}
