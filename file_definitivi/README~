@@ -45,12 +45,12 @@ Document: schemaExchange
 field:
 
 
-1) :n_rel             => numero relazioni
-2) :n_tot_key     => numero delle chiavi
-3) :n_tot_fkey    => numero delle chiavi esterne
-4) :n_in_arcs     =>  numero degli archi entranti
-5) :cod_rels       => #key#fkey#inarcs<codifica  unaria del nemuro degli attributi mediante il carattere 'a'>
-6) :cod_fkey      =>  rel_<lista ordinata degli identificatori separata da '_' delle relazioni a cui fanno riferimento le chiavi esterne di rel>
+1) :n_rel	=> numero relazioni
+2) :n_tot_key	=> numero delle chiavi
+3) :n_tot_fkey	=> numero delle chiavi esterne
+4) :n_in_arcs	=>  numero degli archi entranti
+5) :cod_rels 	=> #key#fkey#inarcs<codifica  unaria del nemuro degli attributi mediante il carattere 'a'>
+6) :cod_fkey 	=>  rel_<lista ordinata degli identificatori separata da '_' delle relazioni a cui fanno riferimento le chiavi esterne di rel>
 
 #DA MODELLARE LA RICERCA SULLE COSTANTI, LIVELLO DI DETTAGLIO TROPPO ALTO
 

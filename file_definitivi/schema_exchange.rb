@@ -5,7 +5,7 @@ require "pp"
 
 =begin
   uno schemaexchange è identificato da una:
-  * source: un hash con chiave il nome della relazione che punta a un oggetto relation
+  * source: un arry di oggetti relation
   * target: codice xml che descrive il target
 =end
 class SchemaExchange
