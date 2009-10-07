@@ -37,12 +37,15 @@ private
                document[:n_rel]=Ferret::Field.new se.source.length
                document[:n_tot_key]=Ferret::Field.new se.totkey
 			document[:n_tot_fkey]=Ferret::Field.new se.totfkey
-			document[:cod_rels]=Ferret::Field.new se.source.each { |rel| rel.identify }
-			appstr = ""
-			se.source.each { |rel| appstr += "#{rel.identify} "}
-			puts appstr
+			apprelscod = ""
+			se.source.each { |rel| apprelscod += "#{rel.identify} "}
+			puts apprelscod
+			apprefcod = ""
+			se.each_ref_cod { |cod| apprefcod += "#{cod} "}
+			puts apprefcod
+			document[:cod_rels]=Ferret::Field.new apprelscod
 			#le codifiche delle chiavi esterne vanno separate da spazio?? per ora si
-			document[:cod_fkey  ]=Ferret::Field.new se.each_ref_cod { |cod| cod}
+			document[:cod_fkey  ]=Ferret::Field.new apprefcod
 			@index << document
 		}
 		@index.optimize()
