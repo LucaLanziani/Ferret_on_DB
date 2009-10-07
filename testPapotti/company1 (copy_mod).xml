@@ -2,7 +2,7 @@
 <!DOCTYPE schemaExchange SYSTEM "dtdForSchemaExchange.dtd">
 <schemaExchange name="C1-company CMS esterno con FK">
 	<source>
-		<relation name="r1">
+		<relation name="r1"> 010200aa
 			<key name="k1"/>
 			<attribute name="a1" constant="title"/>
 			<fkey name="fk1">
@@ -11,15 +11,15 @@
 			<fkey name="fk2">
 				<refRelName>r3</refRelName>
 			</fkey>
-		</relation>
+		</relation> 010001aa
 		<relation name="r2">
 			<key name="k2"/>
 			<attribute name="a2" constant="officePhone" />
 		</relation>
-		<relation name="r3">
+		<relation name="r3"> 010001aaa
 			<key name="k3"/>
-			<attribute name="a3" constant="file" />
-			<attribute name="a3" />
+			<attribute name="a31" constant="file" />
+			<attribute name="a32" />
 		</relation>
 	</source>
 	<target>
