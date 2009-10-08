@@ -60,23 +60,19 @@ class SchemaSearcher
 end
 
 if __FILE__ == $0
-=begin
-  n_rel: 3 AND 
-  n_tot_key: 3 AND 
-  n_tot_fkey: 2 AND 
-  ((cod_rels: 010001aa AND cod_rels: 010001aaa AND cod_rels 010200aa) OR 
-  (cod_rels: 010100aa* AND cod_rels: 010100aaa* AND cod_rels 010200aa*)) AND 
-  ((cod_fkey: 010200aa_010001aa_010001aaa) OR (cod_fkey: 010200aa*_010001aa*_010001aaa*))
-=end  
+  XML_SCHEMA_DIR="../testPapotti"
+  XML_INDEX_DIR="./unary_index/"
+  XML_INPUT_FILE="../testPapotti/S3.xml"
+  ip = IndexPopulator.new(XML_SCHEMA_DIR,XML_INDEX_DIR)
   ss=SchemaSearcher.new
-  ss.from_file("../testPapotti/S3.xml")
+  ss.from_file(XML_INPUT_FILE)
   
   query_parser=Ferret::QueryParser.new()
   
-#  query=query_parser.parse("n_rel: 3 AND n_tot_key: 3 AND n_tot_fkey: 0 AND ((cod_rels: 010000aa AND cod_rels: 010000aa AND cod_rels 010000aaa) OR (cod_rels: 010000aa* AND cod_rels: 010000aa* AND cod_rels 010000aaa*)")) 
-  query=query_parser.parse("n_rel: 3 AND n_tot_key: 3 AND n_tot_fkey: 2 AND ((cod_rels: 010001aa AND cod_rels: 010001aaa AND cod_rels 010200aa) OR (cod_rels: 010100aa* AND cod_rels: 010100aaa* AND cod_rels 010200aa*)) AND ((cod_fkey: 010200aa_010001aa_010001aaa) OR (cod_fkey: 010200aa*_010001aa*_010001aaa*))") 
+  #query=query_parser.parse("n_rel: 3 AND n_tot_key: 3 AND n_tot_fkey: 2 AND ((cod_rels: 010001aa AND cod_rels: 010001aaa AND cod_rels 010200aa) OR (cod_rels: 010100aa* AND cod_rels: 010100aaa* AND cod_rels 010200aa*)) AND ((cod_fkey: 010200aa_010001aa_010001aaa) OR (cod_fkey: 010200aa*_010001aa*_010001aaa*))") 
+  
   query=query_parser.parse(ss.create_query)
-  #ip = IndexPopulator.new("../testPapotti","./unary_index/")
+  
   index= IndexReader.new("./unary_index/")
   searcher = Searcher.new(index)
   field_sort = SortField.new(:o_cod_rels,:type => :byte)
