@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{Garey-Johnson}
+Garey Johnson.
+\newblock {\em Computers and Intractability: a guide to the theory of
+  NP-completeness}.
+\newblock Freeman, 1979.
+
+\bibitem{altra-citazione}
+D.~Knuth.
+\newblock {\em The Art of Computer Programming}.
+\newblock Addison Wesley, 1970.
+
+\end{thebibliography}

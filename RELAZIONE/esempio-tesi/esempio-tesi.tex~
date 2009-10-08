@@ -1,0 +1,45 @@
+\documentclass[a4paper,11pt,oneside,titlepage,openright,fleqn]{article}
+\usepackage[italian]{babel}              % italiano
+\usepackage[utf8x]{inputenc}    % accenti
+\usepackage{indentfirst}
+\usepackage[dvips]{graphicx}    % per includere i grafici
+\usepackage{amssymb}            % per i simboli matematici
+\usepackage{amsmath}            %            "
+\usepackage{latexsym}           %            "
+\usepackage{amsthm}             %            "
+\usepackage{amsfonts}
+\usepackage{lettrine}           % per il capolettera dell'introduzione
+\usepackage{epsfig}             % per includere le figure
+\usepackage{caption}
+\pagestyle{plain}
+
+% per l'interlinea
+\linespread{1.6}
+
+% per definire nuovi comandi: esempio
+\newcommand{\dia}{\textit{Dipartimento di Informatica e Automazione}}
+\newcommand{\fer}{\textit{Ferret }}
+\newcommand{\doc}{\textit{Document }}
+\newcommand{\f}{\textit{Field }}
+\newcommand{\se}{\texttt{SE }}
+
+\hyphenation{sil-la-ba-zio-ne}                   % per la corretta sillabazione delle parole
+\hyphenation{del-le} \hyphenation{pa-ro-le}
+
+
+\linespread{1.2}
+
+\begin{document}
+\input{titolo}            % PRIMA PAGINA
+\vfill
+\newpage
+\setcounter{page}{1}           % PRIMA PAGINA
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{articolo}        %% contenuto
+
+
+\end{document}

@@ -1,0 +1,92 @@
+\section*{Obiettivo}
+Il nostro lavoro ha sondato la possibilità di rappresentare i dati contenuti in un repository (progetto GAIA) in modo che fossero indicizzabili e ricercabili mediante un motore di indicizzazione e ricerca testuale quale ad esempio Lucene. Nella fattispecie è stato adoperato il linguaggio Ruby e il motore ad esso correlato: \fer. Lo sforzo maggiore, oltre alla buona quantità di codice generato, è stato speso nel cercare una codifica testuale delle informazioni contenute nel repository tale che fosse possibile crearvi sopra un indice di cerca proprio mediante \fer ed effettuarvi ricerche. Tali ricerche, proprio grazie alla tecnologia del motore di ricerca adottato dovrebbero risultare estremamente più rapide, che se non effettuate su database sfruttando una tecnologia basata essenzialmente su SQL.  
+\section*{Il modello dell'indice}
+Il modello di indice di ricerca sfruttato da \fer prevede la definizione del \doc, l'elemento minimo di indicizzazione e di ricerca. Ogni \doc è strutturato in \f, in ognuno dei quali possiamo andare ad inserire stringhe utili all'indicizzazione. Ovviamente la struttura utilizzata da \fer nella sua interezza è ben più complessa. Quelli citati sono solo gli elementi utili ai nostri scopi.
+\section*{Strutturazione dell'indice}
+Di seguito si illustra la struttura dell'indice di ricerca generato a partire dai dati del repository, la conoscenza della cui struttura è data per scontata.
+
+\subsection*{Scelta del \doc}
+\noindent Il \doc coincide con uno Schema Exchange (di seguito  \se). Grazie a tale scelta con un solo scorrimento dell'indice si riescono a trovare gli Schema Exchange che corrispondono ai criteri di ricerca desiderati.
+\subsection*{Composizione dei \f}
+\noindent Un \doc è composto nel modello presentato dai seguenti \f:
+\begin{description}
+	\item[:n\_rel] $\rightarrow$ Numero delle relazioni presenti nello \se;
+	\item[:n\_tot\_key] $\rightarrow$ Numero totale delle chiavi nello \se;
+	\item[:n\_tot\_fkey] $\rightarrow$ Numero totale delle chiavi esterne nello \se;
+	\item[:cod\_rels] $\rightarrow$ Stringa contenente le codifiche testuali (basate sulle proprietà) delle relazioni nello \se;
+	\item[:o\_cod\_rels] $\rightarrow$ Stringa molto simile alla precedente (diversa solo per l'assenza di spazi bianchi tra le codifiche delle varie relazioni) utile per sistemare alcune questioni legate allo scoring dei risultati ottenuti;
+	\item[:cod\_fkey] $\rightarrow$ Stringa contenente le codifiche testuali (basate sulle proprietà) dei riferimenti descritti dalle chiavi esterne delle tabelle nello \se.
+\end{description}
+
+\subsubsection*{Codifica testuale delle relazioni sulla base delle proprietà}
+\noindent La stringha inserita nel \f {\em :cod\_rels} è composta dalla concatenazione di codifiche testuali delle relazioni nello \se separate da uno spazio. Tale codifica è ottenuta sulla base delle proprietà di ogni singola relazione: {\tt \#K\#F\#A$a^{(i+1)}$}. Ovvero è composta dalla concatenazione di:
+\begin{itemize}
+	\item numero di chiavi presenti nella relazione ({\tt \#K}) espresse mediante due cifre in notazione decimale (cioè possono essere rappresentate al massimo 99 chiavi);
+	\item numero di chiavi  esterne presenti nella relazione ({\tt \#F}) espresse mediante due cifre in notazione decimale (cioè possono essere rappresentate al massimo 99 chiavi esterne);
+	\item numero delle relazioni all'interno dello \se che hanno una chiave esterna con riferimento alla relazione in oggetto, ({\tt \#A}) espresse mediante due cifre in notazione decimale (cioè possono essere rappresentate al massimo 99 chiavi esterne);
+	\item numero di attributi posseduti dalla relazione, espressi in notazione unaria su alfabeto $\{a\}$ ($a^{(i+1)}$) ma con un carattere $a$ in più rispetto al numero di attributi;
+\end{itemize}
+Si sottolinea che il numero di cifre in notazione utilizzato per {\tt \#K}, {\tt \#F} e {\tt \#A} è parametrico ed è semplicemente modificabile.
+
+\subsubsection*{Codifica testuale dei riferimenti descritti dalle chiavi esterne}
+\noindent La stringha inserita nel \f {\em :cod\_fkey} è composta dalla concatenazione di codifiche testuali dei riferimenti descritti dalle chiavi esterne delle tabelle nello \se, separate da uno spazio. Le codifiche sono così composte: $R_{i}\_R_{k_1}\_\dots\_R_{k_n}$, ovvero si concatena alla codifica di una relazione (come descritta precedentemente) mediante l'uso di un carattere \lq\lq{\tt \_}\rq\rq, la codifica delle $n$ relazioni verso cui essa ha un riferimento (chiave esterna). Le stringhe sono inserite secondo l'ordine lessigrafico delle $R_{i}$. Anche le $n$ codifiche $R_k$ sono inserite in ordine lessicografico e concatenate mediante carattere \lq\lq{\tt \_}\rq\rq.
+
+\section*{La query in FQL}
+Di seguito riportiamo un esempio di query che dovrebbe chiarire come possa essere effettuata la ricerca sull'indice generato con il modello descritto. \fer mette a disposizione molti modelli di query, oltre ad un vero e proprio query language, chiamato Ferret Query Language (FQL). La query sottoposta al motore è effettuata proprio in FQL. Vediamo un esempio:
+\begin{verbatim}
+     n_rel: 3 
+AND 
+     n_tot_key: 3 
+AND 
+     n_tot_fkey: 2 
+AND 
+     (	
+          (
+                cod_rels: 010001aa 
+           AND 
+                cod_rels: 010001aaa 
+           AND 
+                cod_rels 010200aa
+           ) 
+         OR 
+          (
+                cod_rels: 010100aa* 
+           AND 
+                cod_rels: 010100aaa* 
+           AND 
+                cod_rels 010200aa*
+           )
+     ) 
+AND 
+     (
+          (cod_fkey: 010200aa_010001aa_010001aaa) 
+      OR 
+          (cod_fkey: 010200aa*_010001aa*_010001aaa*)
+     )
+\end{verbatim}
+
+Vediamo in dettaglio cosa si richiede specificando una query come quella precedente. Gli \se che matchano hanno le seguenti prorpietà: 
+\begin{itemize}
+	\item {\tt n\_rel: 3} $\rightarrow$ hanno 3 relazioni
+	\item {\tt n\_tot\_key: 3} $\rightarrow$ hanno in totale 3 chiavi
+	\item {\tt n\_tot\_fkey: 2} $\rightarrow$ hanno in totale 2 chiavi esterne
+	\item {\tt (cod\_rels: 010001aa AND cod\_rels: 010001aaa AND cod\_rels 010200aa)} $\rightarrow$ hanno relazioni le cui proprietà sono codificate dalle stringhe riportate (match perfetto)
+	\item {\tt OR (cod\_rels: 010100aa* AND cod\_rels: 010100aaa* AND cod\_rels 010200aa*)} $\rightarrow$ o che hanno almeno lo stesso numero di attributi (* è una wildcard, indica un numero qualunque di caratteri)
+	\item {\tt (cod\_fkey: 010200aa\_010001aa\_010001aaa)} $\rightarrow$ presenta i riferimenti descritti dalla striga riportata (match perfetto)
+	\item {\tt OR (cod\_fkey: 010200aa*\_010001aa*\_010001aaa*)} $\rightarrow$ o è possibile che abbia riferimenti analoghi a quelli dell'input ma tra relazioni che presentano un surplus di attributi
+\end{itemize}
+Da notare che il sistema di scoring attribuisce uno score maggiore al match perfetto perchè il match è su entrambi i termini in OR, quello perfetto e quello con wildcard.
+
+\section*{Istruzioni di esecuzione}
+\noindent Per eseguire un test lanciare da terminale {\tt ruby schema\_searcher.rb}. Per configurare l'esecuzione modificare il valore delle tre costanti:
+\begin{itemize}
+	\item {\tt XML\_INPUT\_FILE} $\rightarrow$ file xml descrivente il DataExchange da ricercare tra le parti sinistre degli \se nel repository;
+	\item {\tt XML\_SCHEMA\_DIR} $\rightarrow$ la directory contenente i file xml descriventi gli \se da aggiungere nel repository;
+	\item {\tt XML\_INDEX\_DIR} $\rightarrow$ directory nella quale salvare l'indice,
+\end{itemize}
+nel file {\tt schema\_searcher.rb}.
+
+\section*{Sviluppi futuri}
+Il nostro lavoro è terminato prima della modellazione della ricerca per quanto riguarda il match totale o parziale sulle costanti. L'indice modellato così come illustrato non consente di inserire un \f che modelli la presenza di costanti su particolari atomi di una relazione. La grana scelta (un \doc per ogni \se) rende inpossibile inserire nell'indice informazioni di così fine grana.
+\noindent Sviluppi futuri potrebbero prevedere la creazione di un secondo indice nel quale modellare l'informazione sulle costanti e sul quale si proceda a ricercare solo dopo aver completato la ricerca sul primo indice, avendo cioè già effettuato la selezione dei risultati da presentare. La ricerca sul secondo indice ha il solo fine di far salire o scendere nel ranking uno schema a seconda del numero di costanti che esso condivide con quelle presenti nell'input della ricerca.
+
